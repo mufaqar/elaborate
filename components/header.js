@@ -19,8 +19,8 @@ export default function Header() {
 
             <nav className="flex bg-zinc-500 px-4 py-4 items-center">
                 {/* mobile Menu Starts */}
-                <div className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-gray-500 px-4 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out  `}>
-                    <div className="flex items-center justify-center mx-auto mt-5 bg-gray-500" onClick={() => setOpen(false)}> {/*logo container*/}
+                <div className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-zinc-500 px-4 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out  `}>
+                    <div className="flex items-center justify-center mx-auto mt-5 bg-zinc-500" onClick={() => setOpen(false)}> {/*logo container*/}
                         <Link href="/" className="text-xl font-semibold flex justify-center items-center text-white">
                             Logo
                         </Link>
