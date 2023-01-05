@@ -15,6 +15,9 @@ export default function NewsBox() {
             >
                 <source src="https://youtu.be/dQw4w9WgXcQ" />
             </video> */}
+
+            <iframe className="w-full aspect-[9/12] object-cover" src="https://www.youtube.com/dQw4w9WgXcQ"></iframe>
+
             <Link href="#">
                 <Image src={img_url} alt="" className='object-fill' />
             </Link>
