@@ -28,7 +28,7 @@ export default function Header() {
                     <div className="flex flex-col gap-10 text-white text-base mt-16">
                         <div onClick={() => setOpen(false)}>
                             <Link href="#">
-                               Index
+                                Index
                             </Link>
                         </div>
                         <div onClick={() => setOpen(false)}>
@@ -88,9 +88,9 @@ export default function Header() {
             </nav>
 
             <div className="overflow-x-hidden w-screen border-y border-black bg-white py-2">
-                <div className="animate-marquee whitespace-nowrap">
-                    <span className="text-base text-black leading-[30px] mx-4">Marquee Item 1</span>
-                    <span className="text-base text-red-600 leading-[30px] mx-4">LIVE</span>
+                <div className="whitespace-nowrap">
+                    <span className="text-base text-black mx-4 uppercase">Connecting the world wide community of golf enthusiast through interactive live internet experiences</span>
+                    <span className="text-base text-red-600 mx-4 uppercase">LIVE</span>
                 </div>
             </div>
 
