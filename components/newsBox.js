@@ -16,11 +16,7 @@ export default function NewsBox() {
                 <source src="https://youtu.be/dQw4w9WgXcQ" />
             </video> */}
 
-            <iframe className="w-full aspect-[9/12] object-cover" src="https://www.youtube.com/dQw4w9WgXcQ"></iframe>
-
-            <Link href="#">
-                <Image src={img_url} alt="" className='object-fill' />
-            </Link>
+            <iframe className="w-full aspect-[9/12] object-cover" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             <div className='flex px-3 justify-between '>
                 <Link href="#" className='text-lg leading-7 py-2 uppercase'>
