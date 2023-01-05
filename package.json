@@ -1,6 +1,7 @@
 {
   "name": "elaborate",
   "version": "0.1.0",
+  "author": "Mufaqar",
   "private": true,
   "scripts": {
     "dev": "next dev",
