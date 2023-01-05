@@ -10,7 +10,7 @@ export default function NewsBox() {
       <div className="h-full">
         <Image src={img_url} alt="" className="object-fill min-h-full" />
       </div>
-      <div className="flex px-3 justify-between h-[40px]  absolute left-0 right-0 bottom-6">
+      <div className="flex px-3 justify-between h-[40px] bg-white absolute left-0 right-0 bottom-6">
         <Link href="/news" className="text-xs leading-[16px] py-2 uppercase">
           Victoria, Australia
         </Link>
