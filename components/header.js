@@ -17,10 +17,10 @@ export default function Header() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <nav className="flex bg-zinc-500 px-4 py-4 items-center">
+            <nav className="flex bg-[#7B7B7B] px-4 py-2 items-center">
                 {/* mobile Menu Starts */}
-                <div className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-zinc-500 px-4 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out  `}>
-                    <div className="flex items-center justify-center mx-auto mt-5 bg-zinc-500" onClick={() => setOpen(false)}> {/*logo container*/}
+                <div className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out  `}>
+                    <div className="flex items-center justify-center mx-auto mt-5 bg-[#7B7B7B]" onClick={() => setOpen(false)}> {/*logo container*/}
                         <Link href="/" className="text-xl font-semibold flex justify-center items-center text-white">
                             Logo
                         </Link>
@@ -53,7 +53,7 @@ export default function Header() {
                 {/* Main Menu Starts*/}
                 <div className="w-full flex justify-between items-center">
 
-                    <div className="hidden md:flex justify-between w-3/12 text-base text-white">
+                    <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white">
                         <Link href="#">
                             Index
                         </Link>
@@ -75,7 +75,7 @@ export default function Header() {
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex justify-between w-3/12 text-base text-white">
+                    <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white">
                         <Link href="#">
                             Stories
                         </Link>
@@ -87,10 +87,10 @@ export default function Header() {
                 {/* mobile Menu End*/}
             </nav>
 
-            <div className="overflow-x-hidden w-screen border-y border-black bg-white py-2">
+            <div className="overflow-x-hidden w-screen border-y border-black bg-white">
                 <div className="whitespace-nowrap">
-                    <span className="text-base text-black mx-4 uppercase">Connecting the world wide community of golf enthusiast through interactive live internet experiences</span>
-                    <span className="text-base text-red-600 mx-4 uppercase">LIVE</span>
+                    <span className="text-xs leading-[16px] font-normal text-black mx-4 uppercase">Connecting the world wide community of golf enthusiast through interactive live internet experiences</span>
+                    <span className="text-xs leading-[16px] font-normal text-red-600 mx-4 uppercase">LIVE</span>
                 </div>
             </div>
 
