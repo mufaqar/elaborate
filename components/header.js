@@ -35,7 +35,7 @@ export default function Header() {
               href="/"
               className="text-xl font-semibold flex justify-center items-center text-white"
             >
-              Logo
+              Elaborate Walks
             </Link>
           </div>
           <div className="flex flex-col gap-10 text-white text-base mt-16">
@@ -82,7 +82,7 @@ export default function Header() {
 
           <div className="md:w-6/12 w-8/12 mx-auto flex items-center md:justify-center justify-end">
             <Link href="/" className="text-2xl font-semibold text-white">
-              Logo
+              Elaborate Walks
             </Link>
           </div>
 
