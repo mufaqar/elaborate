@@ -12,7 +12,7 @@ export default function NewsBox() {
         </div>
         <div className="flex px-3 justify-between h-[36px] bg-white absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 -bottom-10 group-hover:bottom-[6rem]">
           <Link
-            href="/news"
+            href="#"
             className="text-xs leading-[16px] py-2 uppercase text-blue-600 NeueHaasRoman"
           >
             Victoria, Australia

@@ -11,9 +11,9 @@ export default function Slug() {
         <Image src={img_url} alt="" className='h-full object-cover' />
       </div>
       <div className='flex px-3 '>
-        <Link href="/news" className='text-lg leading-7 px-2 py-3 uppercase NeueHaasRoman'>
+        <p className='text-lg leading-7 px-2 py-3 uppercase NeueHaasRoman'>
           Victoria, Australia
-        </Link>
+        </p>
         <p className='text-lg leading-7 border-l border-black/80 px-2 py-3 uppercase NeueHaasRoman'>
           12:31 PM
         </p>
