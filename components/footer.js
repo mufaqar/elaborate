@@ -1,14 +1,10 @@
 import React from 'react';
+import LiveScroll from './liveScroll';
 
 export default function Footer() {
     return (
-        <footer className='border-y border-black fixed left-0 right-0 bottom-0 bg-[#7B7B7B] '>
-            <div className="overflow-x-hidden">
-                <div className="whitespace-nowrap">
-                    <span className="text-xs leading-[16px] font-normal text-white mx-4 uppercase NeueHaasRoman">Connecting the world wide community of golf enthusiast through interactive live internet experiences</span>
-                    <span className="text-xs leading-[16px] font-normal text-red-600 mx-4 uppercase NeueHaasMedium">LIVE</span>
-                </div>
-            </div>
+        <footer className='border-y border-black fixed left-0 right-0 bottom-0  '>
+            <LiveScroll Custom_bg="bg-[#7B7B7B]" Text_color="text-white" />
         </footer>
     )
 }

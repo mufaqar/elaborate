@@ -1,16 +1,16 @@
 import React from "react";
 
-export default function LiveScroll() {
+export default function LiveScroll({Custom_bg, Text_color}) {
   return (
     <div>
       <div
       
-        className="overflow-x-hidden flex justify-center item-center gap-10 w-screen border-y border-black bg-white"
+        className={`overflow-x-hidden flex justify-center item-center gap-10 w-screen border-y border-black ${Custom_bg}`}
       >
 
         {[1, 2, 3, 4].map((item, i) => (
-          <div className="whitespace-nowrap " key={i}>
-            <span className="text-xs leading-[16px] -mt-[2px] font-normal text-black mx-4 uppercase NeueHaasRoman">
+          <div className="animate-marquee whitespace-nowrap " key={i}>
+            <span className={`text-xs leading-[16px] -mt-[2px] font-normal mx-4 uppercase NeueHaasRoman ${Text_color}`}>
               Connecting the world wide community of golf enthusiast through
               interactive live internet experiences
             </span>

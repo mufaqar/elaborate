@@ -93,7 +93,7 @@ export default function Header() {
         {/* mobile Menu End*/}
       </nav>
 
-      <LiveScroll/>
+      <LiveScroll Custom_bg="bg-white" Text_color="text-black" />
     </header>
   );
 }
