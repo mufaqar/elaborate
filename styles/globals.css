@@ -3,6 +3,29 @@
 @tailwind utilities;
 
 
+
+
+
+
+@font-face {
+    font-family: NeueHaasMedium;
+    src: url(../public/fonts/NeueHaasDisplayMediu.ttf);
+  }
+
+  @font-face {
+    font-family: NeueHaasRoman;
+    src: url(../public/fonts/NeueHaasDisplayRoman.ttf);
+  }
+
+  .NeueHaasMedium{
+    font-family: NeueHaasMedium;
+  }
+
+  .NeueHaasRoman{
+    font-family: NeueHaasRoman;
+  }
+
+  
 .video-container {
     width: 100vw;
     height: 100vh;

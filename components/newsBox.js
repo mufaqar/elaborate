@@ -13,11 +13,11 @@ export default function NewsBox() {
         <div className="flex px-3 justify-between h-[36px] bg-white absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 -bottom-10 group-hover:bottom-[6rem]">
           <Link
             href="/news"
-            className="text-xs leading-[16px] py-2 uppercase text-blue-600"
+            className="text-xs leading-[16px] py-2 uppercase text-blue-600 NeueHaasRoman"
           >
             Victoria, Australia
           </Link>
-          <p className="text-xs leading-[16px] border-l border-black/80 px-2 py-2 uppercase text-red-600 ">
+          <p className="text-xs leading-[16px] border-l border-black/80 px-2 py-2 uppercase text-red-600 NeueHaasRoman">
             12:31 PM
           </p>
         </div>

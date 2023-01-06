@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import LiveScroll from './liveScroll';
+import Logo from '../public/logo.png';
 
 
 export default function Header() {
@@ -23,9 +24,8 @@ export default function Header() {
       <nav className="flex bg-[#7B7B7B] px-4 py-2 items-center">
         {/* mobile Menu Starts */}
         <div
-          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${
-            open ? '-translate-x-0' : '-translate-x-full'
-          } transition-transform duration-300 ease-in-out  `}
+          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${open ? '-translate-x-0' : '-translate-x-full'
+            } transition-transform duration-300 ease-in-out  `}
         >
           <div
             className="flex items-center justify-center mx-auto mt-5 bg-[#7B7B7B]"
@@ -37,10 +37,10 @@ export default function Header() {
               href="/"
               className="text-xl font-semibold flex justify-center items-center text-white"
             >
-              Elaborate Walks
+              <Image src={Logo} alt="" className='w-2/3' />
             </Link>
           </div>
-          <div className="flex flex-col gap-10 text-white text-base mt-16">
+          <div className="flex flex-col gap-10 text-white text-base mt-16 NeueHaasMedium">
             <div onClick={() => setOpen(false)}>
               <Link href="#">Index</Link>
             </div>
@@ -59,36 +59,33 @@ export default function Header() {
 
         {/* Main Menu Starts*/}
         <div className="w-full flex justify-between items-center">
-          <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white">
+          <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white NeueHaasMedium">
             <Link href="#">Index</Link>
             <Link href="#">About</Link>
           </div>
           <div
-            className="z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden"
+            className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${open ? 'mt-[10px]' : 'mt-0'
+              }`}
             onClick={() => {
               setOpen(!open);
             }}
           >
             {/* hamburger button */}
             <span
-              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
-                open ? 'rotate-45 translate-y-2.5 bg-white' : ''
-              }`}
+              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? 'rotate-45 translate-y-2.5 bg-white' : ''
+                }`}
             />
             <span
-              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
-                open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
-              }`}
+              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
+                }`}
             />
           </div>
-
           <div className="md:w-6/12 w-8/12 mx-auto flex items-center md:justify-center justify-end">
-            <Link href="/" className="text-2xl font-semibold text-white">
-              Elaborate Walks
+            <Link href="/" className="justify-center flex">
+              <Image src={Logo} alt="" className='md:w-1/3 2/3' />
             </Link>
           </div>
-
-          <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white">
+          <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white NeueHaasMedium">
             <Link href="#">Stories</Link>
             <Link href="#">All Rights Reserved</Link>
           </div>
