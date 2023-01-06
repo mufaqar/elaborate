@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import LiveScroll from './liveScroll';
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -94,17 +96,7 @@ export default function Header() {
         {/* mobile Menu End*/}
       </nav>
 
-      <div className="overflow-x-hidden w-screen border-y border-black bg-white">
-        <div className="whitespace-nowrap">
-          <span className="text-xs leading-[16px] font-normal text-black mx-4 uppercase">
-            Connecting the world wide community of golf enthusiast through
-            interactive live internet experiences
-          </span>
-          <span className="text-xs leading-[16px] font-normal text-red-600 mx-4 uppercase">
-            LIVE
-          </span>
-        </div>
-      </div>
+      <LiveScroll/>
     </header>
   );
 }
