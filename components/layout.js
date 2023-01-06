@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     return (
         <main className='min-h-screen relative grid items-center'>
             <Header />
-            <section className='md:fixed md:top-[4.6rem] md:bottom-0 md:left-0 md:right-0 '>
+            <section className='fixed 2xl:top-[5rem] xl-[5rem] md:top-[4.5rem] sm:top-[6rem] top-[4.4rem] bottom-0 left-0 right-0 '>
                 {children}
             </section>
             <Footer />
