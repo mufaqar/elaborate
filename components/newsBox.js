@@ -16,14 +16,14 @@ export default function NewsBox({ url, time, title, id }) {
   return (
     <div className="min-h-full md:border-l cursor-pointer border-black relative ">
       <div className="h-screen overflow-hidden relative w-full group">
-        <div class="video-container">
+        <div className="video-container">
           <iframe
             src={`${url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
           ></iframe>
         </div>
         <div className="flex px-3 justify-between h-[36px] bg-white absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 -bottom-10 group-hover:bottom-[6rem]">
           <Link
-            href="#"
+            href="/news"
             className="text-xs leading-[16px] py-2 uppercase text-blue-600 NeueHaasRoman"
           >
             {title}

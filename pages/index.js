@@ -11,7 +11,6 @@ export default function Home() {
           <NewsBox url={item.url} time={item.time} id={i+1} title={item.title} key={i}/>
         ))
       }
-
       </div>
     </section>
   )
