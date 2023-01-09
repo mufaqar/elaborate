@@ -11,10 +11,10 @@ export default function Slug() {
         <Image src={img_url} alt="" className='object-cover h-full' />
       </div>
       <div className='flex px-3 absolute bottom-0 left-0 right-0 bg-white'>
-        <p className='text-lg leading-7 px-2 pt-3 pb-7 uppercase NeueHaasRoman'>
+        <p className='text-lg leading-7 px-2 pt-3 pb-9 uppercase NeueHaasRoman'>
           Victoria, Australia
         </p>
-        <p className='text-lg leading-7 border-l border-black/80 px-2 pt-3 pb-7 uppercase NeueHaasRoman'>
+        <p className='text-lg leading-7 border-l border-black/80 px-2 pt-3 pb-9 uppercase NeueHaasRoman'>
           12:31 PM
         </p>
       </div>
