@@ -8,7 +8,6 @@ export default function Home() {
         {videoData.map((item, i) => (
           <NewsBox
             url={item.url}
-            time={item.time}
             id={i + 1}
             title={item.title}
             key={i}

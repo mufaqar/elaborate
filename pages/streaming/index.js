@@ -8,8 +8,8 @@ export default function Slug() {
   const router = useRouter();
   var link = router.query['streaming'];
   var title = router.query['title'];
-  var time = router.query['time'];
-  console.log(title);
+
+  let s = new Date().toLocaleTimeString();
 
   return (
     <section className="overflow-hidden">
@@ -22,7 +22,7 @@ export default function Slug() {
             {title}
           </p>
           <p className="text-xs leading-4 border-l border-black/80 px-2 pt-2.5 pb-2.5 uppercase NeueHaasRoman">
-            {time}
+            {s}
           </p>
         </div>
       </div>
