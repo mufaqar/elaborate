@@ -2,15 +2,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 
 export default function StreamingBox({ url, title }) {
-  let s = new Date().toLocaleTimeString();
-  // console.log("🚀 ~ file: newsBox.js:7 ~ NewsBox ~ key", id)
-
-  // const [paly, setPlay] = useState(0)
-  // console.log("🚀 ~ file: newsBox.js:10 ~ NewsBox ~ paly", paly)
-
-  // const handlePlay = () =>{
-  //   setPlay(1)
-  // }
+  const ltime = new Date().toLocaleTimeString();
 
   return (
     <div className="md:border-l cursor-pointer border-black relative ">
@@ -30,7 +22,7 @@ export default function StreamingBox({ url, title }) {
             {title}
           </Link>
           <p className="text-xs leading-[16px] border-l border-black/80 px-2 py-2 uppercase text-red-600 NeueHaasRoman">
-            {s}
+            {ltime}
           </p>
         </div>
       </div>
