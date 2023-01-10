@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
-import img_url from "../public/images/dummy.jpg";
+import Link from 'next/link';
+import React, { useState } from 'react';
 
-export default function NewsBox({ url, time, title, id }) {
+export default function StreamingBox({ url, time, title, id }) {
   // console.log("🚀 ~ file: newsBox.js:7 ~ NewsBox ~ key", id)
 
   // const [paly, setPlay] = useState(0)
@@ -16,7 +14,7 @@ export default function NewsBox({ url, time, title, id }) {
   return (
     <div className="md:border-l cursor-pointer border-black relative ">
       <div className="overflow-hidden relative w-full group">
-        <Link href="/news">
+        <Link href="/streaming">
           <div className="video-container">
             <iframe
               src={`${url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
@@ -25,7 +23,7 @@ export default function NewsBox({ url, time, title, id }) {
         </Link>
         <div className="flex px-3 justify-between h-[36px] bg-white absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 bottom-0 md:group-hover:bottom-6">
           <Link
-            href="/news"
+            href="/streaming"
             className="text-xs leading-[16px] py-2 uppercase text-blue-600 NeueHaasRoman"
           >
             {title}
