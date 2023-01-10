@@ -16,11 +16,13 @@ export default function NewsBox({ url, time, title, id }) {
   return (
     <div className="md:border-l cursor-pointer border-black relative ">
       <div className="overflow-hidden relative w-full group">
-        <div className="video-container">
-          <iframe
-            src={`${url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
-          ></iframe>
-        </div>
+        <Link href="/news">
+          <div className="video-container">
+            <iframe
+              src={`${url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
+            ></iframe>
+          </div>
+        </Link>
         <div className="flex px-3 justify-between h-[36px] bg-white absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 bottom-0 md:group-hover:bottom-6">
           <Link
             href="/news"
