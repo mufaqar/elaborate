@@ -14,10 +14,10 @@ export default function StreamingBox({ url, time, title, id }) {
   return (
     <div className="md:border-l cursor-pointer border-black relative ">
       <div className="overflow-hidden relative w-full group">
-        <Link href="/streaming">
+        <Link href={`/streaming?streaming=${url}`}>
           <div className="video-container">
             <iframe
-              src={`${url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
+              src={`https://www.youtube.com/embed/${url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
             ></iframe>
           </div>
         </Link>
