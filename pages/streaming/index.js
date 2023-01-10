@@ -7,7 +7,9 @@ import { useRouter } from 'next/router';
 export default function Slug() {
   const router = useRouter();
   var link = router.query['streaming'];
-  console.log(link);
+  var title = router.query['title'];
+  var time = router.query['time'];
+  console.log(title);
 
   return (
     <section className="overflow-hidden">
@@ -17,10 +19,10 @@ export default function Slug() {
         ></iframe>
         <div className="flex px-3 absolute bottom-6 left-0 right-0 bg-white">
           <p className="text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman">
-            Victoria, Australia
+            {title}
           </p>
           <p className="text-xs leading-4 border-l border-black/80 px-2 pt-2.5 pb-2.5 uppercase NeueHaasRoman">
-            12:31 PM
+            {time}
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-export default function StreamingBox({ url, time, title, id }) {
+export default function StreamingBox({ url, time, title }) {
   // console.log("🚀 ~ file: newsBox.js:7 ~ NewsBox ~ key", id)
 
   // const [paly, setPlay] = useState(0)
@@ -14,7 +14,7 @@ export default function StreamingBox({ url, time, title, id }) {
   return (
     <div className="md:border-l cursor-pointer border-black relative ">
       <div className="overflow-hidden relative w-full group">
-        <Link href={`/streaming?streaming=${url}`}>
+        <Link href={`/streaming?streaming=${url}&title=${title}&time=${time}`}>
           <div className="video-container">
             <iframe
               src={`https://www.youtube.com/embed/${url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
