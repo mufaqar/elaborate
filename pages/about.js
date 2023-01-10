@@ -2,8 +2,8 @@ export default function About() {
   return (
     <section className="py-[90px]">
       <div className="container mx-auto ">
-        <h2>About Us</h2>
-        <p>This is About us Page</p>
+        <h2>About Elaborate Links</h2>
+        <p>Details </p>
       </div>
     </section>
   );
