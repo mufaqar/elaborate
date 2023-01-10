@@ -4,9 +4,9 @@ import Header from './header';
 
 export default function Layout({ children }) {
     return (
-        <main className='relative'>
+        <main className=''>
             <Header />
-            <section className='md:overflow-y-hidden overflow-y-scroll fixed 2xl:top-[5rem] xl-[4.9rem] md:top-[4.3rem] sm:top-[6rem] top-[4.4rem] bottom-0 left-0 right-0 -z-10'>
+            <section className='md:overflow-y-hidden overflow-y-scroll -z-10'>
                 {children}
             </section>
             <Footer />

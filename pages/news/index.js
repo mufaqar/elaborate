@@ -5,13 +5,12 @@ import img_url from '../../public/images/dummy.jpg';
 
 export default function Slug() {
   return (
-    <section className="relative h-sccreen">
-      <div className='relative h-[90vh]'>
+    <section className="overflow-hidden">
+      <div className='relative video-container'>
         <iframe
           src={`https://www.youtube.com/embed/DbLMSFvB2Og?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
         ></iframe>
-      </div>
-      <div className='flex px-3 absolute bottom-0 left-0 right-0 bg-white'>
+        <div className='flex px-3 absolute bottom-6 left-0 right-0 bg-white'>
         <p className='text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman'>
           Victoria, Australia
         </p>
@@ -19,6 +18,8 @@ export default function Slug() {
           12:31 PM
         </p>
       </div>
+      </div>
+      
     </section>
   )
 }

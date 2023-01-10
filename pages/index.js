@@ -4,7 +4,7 @@ import {videoData} from "../public/videos.data"
 
 export default function Home() {
   return (
-    <section className="md:pb-0 pb-[25px]">
+    <section className="">
       <div className="grid md:grid-cols-4 grid-cols-1 min-h-full">
       {
         videoData.map((item, i)=>(
