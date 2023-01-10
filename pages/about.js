@@ -2,8 +2,8 @@ export default function About() {
   return (
     <section className="py-[120px]">
       <div className="container mx-auto ">
-        <h2> Welcome To Elaborate Links</h2>
-        <br />
+        <h2 className="text-2xl mb-4"> Welcome To Elaborate Links</h2>
+
         <p className="mb-4">
           Elaborate Links is a Professional live Steaming Platform. Here we will
           provide you only interesting content, which you will like very much.
