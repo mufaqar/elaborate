@@ -21,7 +21,7 @@ export default function Slug() {
           <p className="text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman">
             {title}
           </p>
-          <p className="text-xs leading-4 border-l border-black/80 px-2 pt-2.5 pb-2.5 uppercase NeueHaasRoman">
+          <p className="text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-black/80">
             {s}
           </p>
         </div>
