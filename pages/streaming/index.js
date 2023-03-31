@@ -28,7 +28,7 @@ export default function Slug({ url }) {
         <div className={` grid md:grid-cols-4 grid-cols-1 absolute bottom-6 left-0 right-0 `}>
           {videoData.map((item, i) => (
             <div key={i}>
-              <div className={`flex bg-[#F2F2F2] h-full`}>
+              <div className={`flex bg-[#F2F2F2] h-full justify-between`}>
                 <Link href={`/streaming?streaming=${item.url}&title=${item.title}`}
                   className="text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] [&:nth-child(1)>p]:border-l-0">
                   {item.title}
