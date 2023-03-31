@@ -16,7 +16,7 @@ export default function StreamingBox({ url, title }) {
         </Link>
         <div className="flex px-3 justify-between  bg-[#F2F2F2] absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 bottom-0 md:group-hover:bottom-6">
           <Link
-            href="/streaming"
+            href={`/streaming?streaming=${url}&title=${title}`}
             className="text-xs leading-[16px] py-2 uppercase text-blue-600 NeueHaasRoman"
           >
             {title}
