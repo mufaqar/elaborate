@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Cam from '../../public/images/cam.png';
 import { useRouter } from 'next/router';
@@ -9,6 +9,7 @@ export default function Slug({ url }) {
   const router = useRouter();
   var link = router.query['streaming'];
   var title = router.query['title'];
+  const [active, setActive] = useState(false)
 
   let s = new Date().toLocaleTimeString();
 
@@ -21,19 +22,20 @@ export default function Slug({ url }) {
         <div className='absolute bottom-24 left-5 '>
           <Image src={Cam} alt="" />
           <p className="mt-5 text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman bg-[#F2F2F2]">
-            {title}<br/>
+            {title}<br />
             {s}
           </p>
         </div>
         <div className={` grid md:grid-cols-4 grid-cols-1 absolute bottom-6 left-0 right-0 `}>
           {videoData.map((item, i) => (
-            <div key={i}>
-              <div className={`flex bg-[#F2F2F2] h-full justify-between`}>
+            <div key={i} className="bg-[#F2F2F2]">
+              <div className={`flex h-full justify-between ${active == item && 'bg-[#414141]'}`}
+                onClick={() => setActive(item)}>
                 <Link href={`/streaming?streaming=${item.url}&title=${item.title}`}
-                  className="text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] [&:nth-child(1)>p]:border-l-0">
+                  className={`text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] [&:nth-child(1)>p]:border-l-0 ${active == item && 'text-[#F2F2F2]'}`}>
                   {item.title}
                 </Link>
-                <p className="text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070]">
+                <p className={`text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] ${active == item && 'text-[#EBFF00]'}`}>
                   {s}
                 </p>
               </div>
