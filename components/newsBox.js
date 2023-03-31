@@ -14,14 +14,14 @@ export default function StreamingBox({ url, title }) {
             ></iframe>
           </div>
         </Link>
-        <div className="flex px-3 justify-between h-[36px] bg-white absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 bottom-0 md:group-hover:bottom-6">
+        <div className="flex px-3 justify-between  bg-[#F2F2F2] absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 bottom-0 md:group-hover:bottom-6">
           <Link
             href="/streaming"
             className="text-xs leading-[16px] py-2 uppercase text-blue-600 NeueHaasRoman"
           >
             {title}
           </Link>
-          <p className="text-xs leading-[16px] border-l border-black/80 px-2 py-2 uppercase text-red-600 NeueHaasRoman">
+          <p className="text-xs leading-[16px] border-l border-[#707070] px-2 py-2 uppercase text-red-600 NeueHaasRoman">
             {ltime}
           </p>
         </div>

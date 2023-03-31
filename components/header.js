@@ -23,9 +23,8 @@ export default function Header() {
       <nav className="flex bg-[#7B7B7B] px-4 py-2 items-center">
         {/* mobile Menu Starts */}
         <div
-          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${
-            open ? '-translate-x-0' : '-translate-x-full'
-          } transition-transform duration-300 ease-in-out  `}
+          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${open ? '-translate-x-0' : '-translate-x-full'
+            } transition-transform duration-300 ease-in-out  `}
         >
           <div
             className="flex items-center justify-center mx-auto mt-5 bg-[#7B7B7B]"
@@ -64,28 +63,25 @@ export default function Header() {
             <Link href="/about">About</Link>
           </div>
           <div
-            className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${
-              open ? 'mt-[10px]' : 'mt-0'
-            }`}
+            className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${open ? 'mt-[10px]' : 'mt-0'
+              }`}
             onClick={() => {
               setOpen(!open);
             }}
           >
             {/* hamburger button */}
             <span
-              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
-                open ? 'rotate-45 translate-y-2.5 bg-white' : ''
-              }`}
+              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? 'rotate-45 translate-y-2.5 bg-white' : ''
+                }`}
             />
             <span
-              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
-                open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
-              }`}
+              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
+                }`}
             />
           </div>
           <div className="md:w-6/12 w-8/12 mx-auto flex items-center md:justify-center justify-end">
             <Link href="/" className="justify-center flex">
-              <Image src={Logo} alt="" className="md:w-1/3 2/3" />
+              <Image src={Logo} alt="" className="md:w-2/3 w-2/3" />
             </Link>
           </div>
           <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white NeueHaasMedium">
@@ -96,7 +92,7 @@ export default function Header() {
         {/* mobile Menu End*/}
       </nav>
 
-      <LiveScroll Custom_bg="bg-white" Text_color="text-black" />
+      {/* <LiveScroll Custom_bg="bg-white" Text_color="text-black" /> */}
     </header>
   );
 }

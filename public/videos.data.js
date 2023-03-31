@@ -1,18 +1,18 @@
 export const videoData = [
   {
     url: 'DbLMSFvB2Og',
-    title: 'Anglesea Golf Club',
+    title: 'THE CASTLE COURSE - ST ANDREWS, SCOTLAND',
   },
   {
     url: 'gauf1M1CvFo',
-    title: 'La Manga Club',
+    title: 'PEBBLE BEACH GOLF LINKS - PEBBLE BEACH, CA, USA',
   },
   {
     url: 'w9ItD-QixNE',
-    title: '1st Tee Box',
+    title: 'BANDON DUNES GC - BANDON, OREGON, USA',
   },
   {
     url: 'gauf1M1CvFo',
-    title: 'La Manga Club',
+    title: 'ROYAL PORTHCAWL - PORTHCAWL, WALES, UK',
   },
 ];
