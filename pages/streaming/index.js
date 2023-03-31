@@ -9,7 +9,7 @@ export default function Slug({ url }) {
   const router = useRouter();
   var link = router.query['streaming'];
   var title = router.query['title'];
-  const [active, setActive] = useState(false)
+  console.log(link)
 
   let s = new Date().toLocaleTimeString();
 
@@ -29,13 +29,12 @@ export default function Slug({ url }) {
         <div className={` grid md:grid-cols-4 grid-cols-1 absolute bottom-6 left-0 right-0 `}>
           {videoData.map((item, i) => (
             <div key={i} className="bg-[#F2F2F2]">
-              <div className={`flex h-full justify-between ${active == item && 'bg-[#414141]'}`}
-                onClick={() => setActive(item)}>
-                <Link href={`/streaming?streaming=${item.url}&title=${item.title}`}
-                  className={`text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] [&:nth-child(1)>p]:border-l-0 ${active == item && 'text-[#F2F2F2]'}`}>
+              <div className={`flex h-full justify-between ${link == item.url && 'bg-[#414141]'}`}>
+                <Link href={`/streaming?streaming=${item.url}&title=${item.title}?id=${i}`}
+                  className={`text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] [&:nth-child(1)>p]:border-l-0 ${link == item.url && 'text-[#F2F2F2]'}`}>
                   {item.title}
                 </Link>
-                <p className={`text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] ${active == item && 'text-[#EBFF00]'}`}>
+                <p className={`text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] ${link == item.url && 'text-[#EBFF00]'}`}>
                   {s}
                 </p>
               </div>

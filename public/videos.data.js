@@ -12,7 +12,7 @@ export const videoData = [
     title: 'BANDON DUNES GC - BANDON, OREGON, USA',
   },
   {
-    url: 'gauf1M1CvFo',
+    url: 'gauf1M1CvFoo',
     title: 'ROYAL PORTHCAWL - PORTHCAWL, WALES, UK',
   },
 ];

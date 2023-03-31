@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-export default function StreamingBox({ url, title }) {
+export default function StreamingBox({ url, title , id}) {
   const ltime = new Date().toLocaleTimeString();
 
   return (
@@ -16,7 +16,7 @@ export default function StreamingBox({ url, title }) {
         </Link>
         <div className="flex px-3 justify-between  bg-[#F2F2F2] absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom-6 bottom-0 md:group-hover:bottom-6">
           <Link
-            href={`/streaming?streaming=${url}&title=${title}`}
+            href={`/streaming?streaming=${url}&title=${title}?id=${id-1}`}
             className="text-xs leading-[16px] py-2 uppercase text-blue-600 NeueHaasRoman"
           >
             {title}
