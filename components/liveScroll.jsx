@@ -5,7 +5,7 @@ export default function LiveScroll({Custom_bg, Text_color}) {
     <div>
       <div
       
-        className={`overflow-x-hidden flex justify-center item-center gap-10 w-screen border-y border-black ${Custom_bg}`}
+        className={`overflow-x-hidden flex justify-center item-center gap-10 w-screen border-y border-[#707070] ${Custom_bg}`}
       >
 
         {[1, 2, 3, 4].map((item, i) => (

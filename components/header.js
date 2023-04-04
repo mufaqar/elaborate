@@ -20,7 +20,7 @@ export default function Header() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className="flex bg-[#7B7B7B] px-4 py-2 items-center">
+      <nav className="flex  items-center">
         {/* mobile Menu Starts */}
         <div
           className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${open ? '-translate-x-0' : '-translate-x-full'
@@ -57,36 +57,36 @@ export default function Header() {
         {/* mobile Menu End*/}
 
         {/* Main Menu Starts*/}
-        <div className="w-full flex justify-between items-center">
-          <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white NeueHaasMedium">
-            <Link href="/">Index</Link>
+        <div className="w-full flex flex-col justify-between items-center">
+          <div className="hidden md:flex justify-between w-full text-sm leading-[14px] font-normal text-white NeueHaasMedium bg-[#7B7B7B]  px-4 py-2">
+            <Link href="/">ELBORTEWALKS.COM</Link>
             <Link href="/about">About</Link>
-          </div>
-          <div
-            className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${open ? 'mt-[10px]' : 'mt-0'
-              }`}
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            {/* hamburger button */}
-            <span
-              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? 'rotate-45 translate-y-2.5 bg-white' : ''
-                }`}
-            />
-            <span
-              className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
-                }`}
-            />
-          </div>
-          <div className="md:w-6/12 w-8/12 mx-auto flex items-center md:justify-center justify-end">
-            <Link href="/" className="justify-center flex">
-              <Image src={Logo} alt="" className="md:w-2/3 w-2/3" />
-            </Link>
-          </div>
-          <div className="hidden md:flex justify-between w-3/12 text-sm leading-[14px] font-normal text-white NeueHaasMedium">
-            <Link href="/stories">Stories</Link>
+            <Link href="/stories">Fetures</Link>
             <p>All Rights Reserved</p>
+          </div>
+          <div className='md:bg-transparent bg-[#7B7B7B] w-full px-4 py-3 flex flex-row justify-between items-center'>
+            <div
+              className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${open ? 'mt-[10px]' : 'mt-0'
+                }`}
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              {/* hamburger button */}
+              <span
+                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? 'rotate-45 translate-y-2.5 bg-white' : ''
+                  }`}
+              />
+              <span
+                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
+                  }`}
+              />
+            </div>
+            <div className="md:w-full w-8/12 mx-auto flex items-center md:justify-center justify-end">
+              <Link href="/" className="justify-center flex">
+                <Image src={Logo} alt="" className="md:w-full w-2/3" />
+              </Link>
+            </div>
           </div>
         </div>
         {/* mobile Menu End*/}

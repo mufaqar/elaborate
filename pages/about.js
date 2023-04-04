@@ -1,25 +1,41 @@
+import Image from "next/image";
+import Cam_dark from '../public/images/cam-dark.png';
+import Link from "next/link";
+
 export default function About() {
   return (
-    <section className="py-[120px]">
-      <div className="container mx-auto ">
-        <h2 className="text-2xl mb-4"> Welcome To Elaborate Links</h2>
-
-        <p className="mb-4">
-          Elaborate Links is a Professional live Steaming Platform. Here we will
-          provide you only interesting content, which you will like very much.
-          We're dedicated to providing you the best of live Steaming, with a
-          focus on dependability and sport live streaming. We're working to turn
-          our passion for live Steaming into a booming online website. We hope
-          you enjoy our live Steaming as much as we enjoy offering them to you.
+    <section className="pb-[120px] pt-52">
+      <div className="container mx-auto text-center max-w-[408px] ">
+        <p className="mb-4 text-center">
+          Elaborate Walks™ is an online repository of on course happenings experienced by the world wide community of golf goers.
         </p>
-        <p className="mb-4">
-          I will keep posting more important posts on my Website for all of you.
-          Please give your support and love.
+        <p className="mb-4 text-center">
+          Watch and listen as the greatest game ever played happens in real time.
         </p>
+        <p className="mb-4 text-center">
+          Designed and Created by Reid Duncan.
+        </p>
+        <p className="my-6 bg-[#7B7B7B] w-fit mx-auto text-white">
+          ELABORATEWALKS.COM
+        </p>
+        <Image src={Cam_dark} alt="" className="mx-auto" />
 
-        <p className="mb-4">Thanks For Visiting Our Site</p>
-        <br />
-        <p className="mb-4">Have a nice day!</p>
+        <div className="my-8">
+          <p className="mb-4 max-w-[408px] mx-auto text-center">
+            For general questions or info on how to have your golf course featured on Elaborate Walks please email:
+          </p>
+          <Link href="mailto:reidmduncan@gmail.com" target="_blank" className="bg-[#7B7B7B] text-white" >
+            reidmduncan@gmail.com
+          </Link>
+        </div>
+        <div>
+          <p className="mb-4 text-center">
+            Instagram:
+          </p>
+          <Link href="#" target="_blank" className="bg-[#7B7B7B] text-white" >
+            @elaboratewalks
+          </Link>
+        </div>
       </div>
     </section>
   );
