@@ -9,7 +9,7 @@ export const videoData = [
   },
   {
     url: 'w9ItD-QixNE',
-    title: 'BANDON DUNES GC - BANDON, OREGON, USA',
+    title: 'BANDON DUNES GC BANDON, OREGON, USA',
   },
   {
     url: 'gauf1M1CvFoo',
