@@ -35,6 +35,35 @@ iframe {
   pointer-events: none;
 }
 
+.circle {
+}
+
+.circle::before {
+  content: '';
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  margin-right: 50px;
+  position: relative;
+  top: 2px;
+}
+.circle::after {
+  content: '';
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 50px;
+  background-color: #ff0000;
+  margin-left: 50px;
+  margin-top: 0px;
+  position: relative;
+  top: 2px;
+}
+
 @media (min-aspect-ratio: 16/9) {
   .video-container iframe {
     height: 56.25vw;
