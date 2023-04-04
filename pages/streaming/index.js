@@ -10,7 +10,7 @@ export default function Slug({ url }) {
   const router = useRouter();
   var link = router.query['streaming'];
   var title = router.query['title'];
-  console.log(link)
+  console.log(link);
 
   let s = new Date().toLocaleTimeString();
 
@@ -20,22 +20,26 @@ export default function Slug({ url }) {
         <iframe
           src={`https://www.youtube.com/embed/${link}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
         ></iframe>
-        <div className='absolute md:bottom-28 bottom-16 left-5 md:right-auto right-5'>
+        <div className="absolute md:bottom-28 bottom-16 left-5 md:right-auto right-5">
           <Image src={Cam} alt="" />
-          <div className='flex items-center  my-4'>
-            <div className='flex border border-white'>
-              <p className="text-xs leading-4 uppercase NeueHaasRoman bg-[#F2F2F2] text-black">
-                {title}
+          <div className="flex items-center  my-4">
+            <div className="flex border border-white">
+              <p className="text-xs leading-4 px-[6px] NeueHaasRoman bg-[#F2F2F2] text-black">
+                {/* {title} */} Pebble Beach Gold Links
               </p>
               <p className="text-xs leading-4 uppercase NeueHaasRoman bg-[#484647] text-white pl-1">
                 {s}
               </p>
             </div>
-            <Image src={Color_Img} alt='' className='ml-3' />
+            <Image src={Color_Img} alt="" className="ml-3" />
           </div>
-          <div className='flex items-center'>
-            <Image src={Play} alt="" className='bg-[#EBFD00] object-contain p-3 h-9 w-9' />
-            <p className="text-xs leading-4 px-2 pt-2 pb-2 uppercase NeueHaasRoman bg-[#F2F2F2] h-9 w-fit">
+          <div className="flex items-center">
+            <Image
+              src={Play}
+              alt=""
+              className="bg-[#EBFD00] object-contain p-3 h-9 w-9"
+            />
+            <p className="text-xs leading-4 px-2 pt-2 pb-2  NeueHaasRoman bg-[#F2F2F2] h-9 w-fit">
               Field Recordings from Augusta National Golf Club
             </p>
           </div>
