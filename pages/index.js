@@ -17,7 +17,7 @@ export default function Home() {
           alt=""
           className="bg-[#EBFD00] object-contain p-3 h-9 w-9"
         />
-        <p className="text-xs leading-4 px-2 pt-2 pb-2  NeueHaasRoman bg-[#F2F2F2] h-9 w-fit">
+        <p className="text-xs leading-5 px-2 pt-2 pb-2  NeueHaasRoman bg-[#F2F2F2] h-9 w-fit">
           Field Recordings from Augusta National Golf Club
         </p>
       </div>
