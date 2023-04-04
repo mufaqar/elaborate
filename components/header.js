@@ -23,8 +23,9 @@ export default function Header() {
       <nav className="flex  items-center">
         {/* mobile Menu Starts */}
         <div
-          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${open ? '-translate-x-0' : '-translate-x-full'
-            } transition-transform duration-300 ease-in-out  `}
+          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${
+            open ? '-translate-x-0' : '-translate-x-full'
+          } transition-transform duration-300 ease-in-out  `}
         >
           <div
             className="flex items-center justify-center mx-auto mt-5 bg-[#7B7B7B]"
@@ -58,28 +59,40 @@ export default function Header() {
 
         {/* Main Menu Starts*/}
         <div className="w-full flex flex-col justify-between items-center">
-          <div className="hidden md:flex justify-between w-full text-sm leading-[14px] font-normal text-white NeueHaasMedium bg-[#7B7B7B]  px-4 py-2">
-            <Link href="/">ELBORTEWALKS.COM</Link>
-            <Link href="/about">About</Link>
-            <Link href="/stories">Fetures</Link>
-            <p>All Rights Reserved</p>
+          <div className="hidden md:flex justify-between w-full text-sm leading-[14px] font-normal text-white  bg-[#F2F2F2]  px-4 py-2">
+            <Link href="/" className="bg-[#484647]">
+              ELBORTEWALKS.COM
+            </Link>
+            <Link href="/about" className="bg-[#484647]">
+              About
+            </Link>
+            <Link href="/stories" className=" bg-[#7B7B7B] ">
+              Fetures
+            </Link>
+            <p></p>
+            <Link href="" className=" bg-[#7B7B7B] ">
+              All Rights Reserved
+            </Link>
           </div>
-          <div className='md:bg-transparent bg-[#7B7B7B] w-full px-4 py-3 flex flex-row justify-between items-center'>
+          <div className="md:bg-transparent bg-[#7B7B7B] w-full px-4 py-3 flex flex-row justify-between items-center">
             <div
-              className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${open ? 'mt-[10px]' : 'mt-0'
-                }`}
+              className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${
+                open ? 'mt-[10px]' : 'mt-0'
+              }`}
               onClick={() => {
                 setOpen(!open);
               }}
             >
               {/* hamburger button */}
               <span
-                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? 'rotate-45 translate-y-2.5 bg-white' : ''
-                  }`}
+                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
+                  open ? 'rotate-45 translate-y-2.5 bg-white' : ''
+                }`}
               />
               <span
-                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
-                  }`}
+                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
+                  open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
+                }`}
               />
             </div>
             <div className="md:w-full mx-auto flex items-center md:justify-center justify-end">
