@@ -24,10 +24,10 @@ export default function Slug({ url }) {
           <Image src={Cam} alt="" />
           <div className="flex items-center  my-4">
             <div className="flex border border-white">
-              <p className="text-xs leading-4 px-[6px] NeueHaasRoman bg-[#F2F2F2] text-black">
+              <p className="text-xs leading-4 px-[6px] pr-[16px] NeueHaasRoman bg-[#F2F2F2] text-black">
                 {/* {title} */} Pebble Beach Gold Links
               </p>
-              <p className="text-xs leading-4 uppercase NeueHaasRoman bg-[#484647] text-white pl-1">
+              <p className="text-xs leading-4 uppercase px-[6px] NeueHaasRoman bg-[#484647] text-white pl-1">
                 {s}
               </p>
             </div>
@@ -39,7 +39,7 @@ export default function Slug({ url }) {
               alt=""
               className="bg-[#EBFD00] object-contain p-3 h-9 w-9"
             />
-            <p className="text-xs leading-4 px-2 pt-2 pb-2  NeueHaasRoman bg-[#F2F2F2] h-9 w-fit">
+            <p className="text-xs leading-4 pt-2 pb-2 px-[12px]  NeueHaasRoman bg-[#F2F2F2] h-9 w-fit">
               Field Recordings from Augusta National Golf Club
             </p>
           </div>
