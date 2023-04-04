@@ -41,13 +41,13 @@ export default function Header() {
           </div>
           <div className="flex flex-col gap-10 text-white text-base mt-16 NeueHaasMedium">
             <div onClick={() => setOpen(false)}>
-              <Link href="/">Index</Link>
+              <Link href="/">ELBORTEWALKS.COM</Link>
             </div>
             <div onClick={() => setOpen(false)}>
               <Link href="/about">About</Link>
             </div>
             <div onClick={() => setOpen(false)}>
-              <Link href="/stories">Stories</Link>
+              <Link href="/stories">Features</Link>
             </div>
             <div onClick={() => setOpen(false)}>
               <p>All Rights Reserved</p>
@@ -82,7 +82,7 @@ export default function Header() {
                   }`}
               />
             </div>
-            <div className="md:w-full w-8/12 mx-auto flex items-center md:justify-center justify-end">
+            <div className="md:w-full mx-auto flex items-center md:justify-center justify-end">
               <Link href="/" className="justify-center flex">
                 <Image src={Logo} alt="" className="md:w-full w-2/3" />
               </Link>
