@@ -27,7 +27,7 @@ export default function Footer() {
                   link == item.url && 'text-[#F2F2F2]'
                 }`}
               >
-                {item.title}
+                <span className="font-bold"> {item.title}</span> - {item.title}
               </Link>
               <p
                 className={`text-xs leading-4 px-2 pt-[8px] pb-[8px] uppercase NeueHaasRoman border-l border-[#707070] ${
