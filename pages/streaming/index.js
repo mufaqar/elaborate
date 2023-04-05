@@ -26,10 +26,10 @@ export default function Slug({ url }) {
           <Image src={Cam} alt="" />
           <div className="flex items-center my-4 justify-between">
             <div className="flex border border-white">
-              <p className=" text-xs leading-4 px-[6px] pr-[16px] NeueHaasRoman bg-[#F2F2F2] text-black w-[80%]  ">
+              <p className=" text-xs leading-4 px-[6px] pr-[16px] NeueHaasRoman bg-[#F2F2F2] text-black min-w-[212px]  ">
                 {title}
               </p>
-              <p className=" text-xs leading-4 uppercase px-[6px] NeueHaasRoman bg-[#484647] text-white  ">
+              <p className=" text-xs leading-4 uppercase px-[6px] NeueHaasRoman bg-[#484647] text-white min-w-[90px]   ">
                 {s}
               </p>
             </div>

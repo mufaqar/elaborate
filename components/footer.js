@@ -23,14 +23,14 @@ export default function Footer() {
             >
               <Link
                 href={`/streaming?streaming=${item.url}&title=${item.title}&title2=${item.title2}`}
-                className={`text-xs leading-4 px-2 pt-[8px] pb-[8px] uppercase NeueHaasRoman border-l border-[#707070] [&:nth-child(1)>p]:border-l-0
+                className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman border-l border-[#707070] [&:nth-child(1)>p]:border-l-0
                 ${link == item.url && 'text-[#F2F2F2]'}`}
               >
                 <span className="font-extrabold"> {item.title}</span> -{' '}
                 <span className="italic"> {item.title2}</span>
               </Link>
               <p
-                className={`text-xs leading-4 px-2 pt-[8px] pb-[8px] uppercase NeueHaasRoman border-l border-[#707070] ${
+                className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman border-l border-[#707070] ${
                   link == item.url && 'text-[#EBFF00]'
                 }`}
               >
