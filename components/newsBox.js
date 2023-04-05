@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-export default function StreamingBox({ url, title, id }) {
+export default function StreamingBox({ url, title, title2 }) {
   const ltime = new Date().toLocaleTimeString();
 
   return (
     <div className="md:border-l cursor-pointer border-black relative [&:nth-child(4)>div>div]:bottom-[25px]">
       <div className="overflow-hidden relative w-full group">
-        <Link href={`/streaming?streaming=${url}&title=${title}`}>
+        <Link
+          href={`/streaming?streaming=${url}&title=${title}&title2=${title2}`}
+        >
           <div className="video-container">
             <iframe
               src={`https://www.youtube.com/embed/${url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}

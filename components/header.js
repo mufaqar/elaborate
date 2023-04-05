@@ -4,9 +4,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import LiveScroll from './liveScroll';
 import Logo from '../public/logo.png';
+import { useRouter } from 'next/router';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(false);
+  const router = useRouter();
+  console.log(router);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">

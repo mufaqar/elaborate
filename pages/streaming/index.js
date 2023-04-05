@@ -10,6 +10,8 @@ export default function Slug({ url }) {
   const router = useRouter();
   var link = router.query['streaming'];
   var title = router.query['title'];
+  var title2 = router.query['title2'];
+
   console.log(link);
 
   let s = new Date().toLocaleTimeString();
@@ -24,8 +26,8 @@ export default function Slug({ url }) {
           <Image src={Cam} alt="" />
           <div className="flex items-center  my-4">
             <div className="flex border border-white">
-              <p className="text-xs leading-4 px-[6px] pr-[16px] NeueHaasRoman bg-[#F2F2F2] text-black">
-                {/* {title} */} Pebble Beach Gold Links
+              <p className="text-xs leading-4 px-[6px] pr-[16px] NeueHaasRoman bg-[#F2F2F2] text-black min-w-[142px] max-w-[142px]">
+                {title}
               </p>
               <p className="text-xs leading-4 uppercase px-[6px] NeueHaasRoman bg-[#484647] text-white pl-1">
                 {s}
