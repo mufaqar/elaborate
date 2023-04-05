@@ -15,7 +15,7 @@ export const videoData = [
     title2: 'BANDON, OREGON, USA',
   },
   {
-    url: 'gauf1M1CvFoo',
+    url: 'JVQaZtahjwg',
     title: 'ROYAL PORTHCAWL',
     title2: 'PORTHCAWL, WALES, UK',
   },
