@@ -64,7 +64,17 @@ export default function Header() {
         {/* Main Menu Starts*/}
         <div className="w-full flex flex-col justify-between items-center">
           <div className="hidden md:flex justify-between w-full text-sm leading-[14px] font-normal text-white  bg-[#F2F2F2]  px-4 py-2">
-            <Link href="/" className="bg-[#484647]">
+            <Link
+              href="/"
+              className={`${
+                router.pathname === '/'
+                  ? active
+                    ? 'bg-[#6F49DD]'
+                    : 'bg-red-500'
+                  : 'bg-[#FAF9FD]'
+              }  
+        `}
+            >
               ELBORTEWALKS.COM
             </Link>
             <Link href="/about" className="bg-[#484647]">
