@@ -8,9 +8,7 @@ import { useRouter } from 'next/router';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(false);
   const router = useRouter();
-  console.log(router);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -46,13 +44,13 @@ export default function Header() {
           </div>
           <div className="flex flex-col gap-10 text-white text-base mt-16 NeueHaasMedium">
             <div onClick={() => setOpen(false)}>
-              <Link href="/">ELBORTEWALKS.COM</Link>
+              <Link href="/" className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} p-1`}>ELBORTEWALKS.COM</Link>
             </div>
             <div onClick={() => setOpen(false)}>
-              <Link href="/about">About</Link>
+              <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} p-1`}>About</Link>
             </div>
             <div onClick={() => setOpen(false)}>
-              <Link href="/stories">Features</Link>
+              <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} p-1`}>Features</Link>
             </div>
             <div onClick={() => setOpen(false)}>
               <p>All Rights Reserved</p>
@@ -66,25 +64,16 @@ export default function Header() {
           <div className="hidden md:flex justify-between w-full text-sm leading-[14px] font-normal text-white  bg-[#F2F2F2]  px-4 py-2">
             <Link
               href="/"
-              className={`${
-                router.pathname === '/'
-                  ? active
-                    ? 'bg-[#6F49DD]'
-                    : 'bg-red-500'
-                  : 'bg-[#FAF9FD]'
-              }  
-        `}
-            >
+              className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1`}>
               ELBORTEWALKS.COM
             </Link>
-            <Link href="/about" className="bg-[#484647]">
+            <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1`}>
               About
             </Link>
-            <Link href="/stories" className=" bg-[#7B7B7B] ">
+            <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1`}>
               Fetures
             </Link>
-            <p></p>
-            <Link href="" className=" bg-[#7B7B7B] ">
+            <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1`}>
               All Rights Reserved
             </Link>
           </div>
