@@ -46,6 +46,7 @@ iframe {
   border-radius: 50%;
   background-color: #ff0000;
   margin-right: 50px;
+  margin-left: 50px;
   position: relative;
   top: 2px;
 }
@@ -58,6 +59,7 @@ iframe {
   -webkit-border-radius: 7.5px;
   border-radius: 50px;
   background-color: #ff0000;
+  margin-right: 50px;
   margin-left: 50px;
   margin-top: 0px;
   position: relative;
