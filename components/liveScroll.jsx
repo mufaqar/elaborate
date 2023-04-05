@@ -11,8 +11,8 @@ export default function LiveScroll({ Custom_bg, Text_color }) {
             <span
               className={`text-xs leading-[16px] -mt-[2px] font-normal mx-4 uppercase NeueHaasRoman ${Text_color}`}
             >
-              Connecting the world wide community of golf enthusiast through
-              interactive live internet experiences
+              CONNECTING THE WORLD WIDE COMMUNITY OF GOLF ENTHUSIASTS THROUGH
+              INTERACTIVE LIVE INTERNET EXPERIENCES.
             </span>
             <span className="text-xs -mt-[2px] leading-[16px] font-normal text-red-600 mx-4 uppercase NeueHaasMedium circle">
               LIVE
