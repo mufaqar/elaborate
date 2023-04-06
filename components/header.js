@@ -64,16 +64,16 @@ export default function Header() {
           <div className="hidden md:flex justify-between w-full text-sm leading-[14px] font-normal text-white  bg-[#F2F2F2]  px-4 py-2">
             <Link
               href="/"
-              className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1 HelveticaMedium `}>
+              className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaMedium `}>
               ELBORTEWALKS.COM
             </Link>
-            <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1 HelveticaMedium `}>
+            <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaMedium `}>
               About
             </Link>
-            <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1 HelveticaMedium `}>
+            <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaMedium `}>
               Fetures
             </Link>
-            <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1 HelveticaMedium `}>
+            <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaMedium `}>
               All Rights Reserved
             </Link>
           </div>
