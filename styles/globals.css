@@ -11,7 +11,14 @@
   font-family: NeueHaasRoman;
   src: url(../public/fonts/NeueHaasDisplayRoman.ttf);
 }
+@font-face {
+  font-family: HelveticaMedium;
+  src: url(../public/fonts/HelveticaNowText-Medium.ttf);
+}
 
+.HelveticaMedium{
+  font-family: HelveticaMedium;
+}
 .NeueHaasMedium {
   font-family: NeueHaasMedium;
 }

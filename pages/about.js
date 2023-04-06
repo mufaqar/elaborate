@@ -15,7 +15,7 @@ export default function About() {
           time.
         </p>
         <p className="mb-4 text-center">Designed and Created by Reid Duncan.</p>
-        <p className="my-6 bg-[#7B7B7B] w-fit mx-auto text-white">
+        <p className="my-6 bg-[#484647] w-fit mx-auto text-white">
           ELABORATEWALKS.COM
         </p>
         <Image src={Cam_dark} alt="" className="mx-auto" />
@@ -28,14 +28,14 @@ export default function About() {
           <Link
             href="mailto:reidmduncan@gmail.com"
             target="_blank"
-            className="bg-[#7B7B7B] text-white"
+            className="bg-[#484647] text-white"
           >
             reidmduncan@gmail.com
           </Link>
         </div>
         <div>
           <p className="mb-4 text-center">Instagram:</p>
-          <Link href="#" target="_blank" className="bg-[#7B7B7B] text-white">
+          <Link href="#" target="_blank" className="bg-[#484647] text-white">
             @elaboratewalks
           </Link>
         </div>

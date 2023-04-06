@@ -42,7 +42,7 @@ export default function Header() {
               <Image src={Logo} alt="" className="w-2/3" />
             </Link>
           </div>
-          <div className="flex flex-col gap-10 text-white text-base mt-16 NeueHaasMedium">
+          <div className="flex flex-col gap-10 text-white text-base mt-16 HelveticaMedium">
             <div onClick={() => setOpen(false)}>
               <Link href="/" className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} p-1`}>ELBORTEWALKS.COM</Link>
             </div>
@@ -64,16 +64,16 @@ export default function Header() {
           <div className="hidden md:flex justify-between w-full text-sm leading-[14px] font-normal text-white  bg-[#F2F2F2]  px-4 py-2">
             <Link
               href="/"
-              className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1`}>
+              className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1 HelveticaMedium `}>
               ELBORTEWALKS.COM
             </Link>
-            <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1`}>
+            <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1 HelveticaMedium `}>
               About
             </Link>
-            <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1`}>
+            <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1 HelveticaMedium `}>
               Fetures
             </Link>
-            <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1`}>
+            <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} p-1 HelveticaMedium `}>
               All Rights Reserved
             </Link>
           </div>
