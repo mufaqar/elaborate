@@ -12,12 +12,12 @@
   src: url(../public/fonts/NeueHaasDisplayRoman.ttf);
 }
 @font-face {
-  font-family: HelveticaMedium;
+  font-family: HelveticaNowText;
   src: url(../public/fonts/HelveticaNowText-Medium.ttf);
 }
 
-.HelveticaMedium{
-  font-family: HelveticaMedium;
+.HelveticaNowText{
+  font-family: HelveticaNowText;
 }
 .NeueHaasMedium {
   font-family: NeueHaasMedium;

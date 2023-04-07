@@ -25,9 +25,8 @@ export default function Header() {
       <nav className="flex  items-center">
         {/* mobile Menu Starts */}
         <div
-          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${
-            open ? '-translate-x-0' : '-translate-x-full'
-          } transition-transform duration-300 ease-in-out  `}
+          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${open ? '-translate-x-0' : '-translate-x-full'
+            } transition-transform duration-300 ease-in-out  `}
         >
           <div
             className="flex items-center justify-center mx-auto mt-5 bg-[#7B7B7B]"
@@ -42,60 +41,69 @@ export default function Header() {
               <Image src={Logo} alt="" className="w-2/3" />
             </Link>
           </div>
-          <div className="flex flex-col gap-10 text-white text-base mt-16 HelveticaMedium">
-            <div onClick={() => setOpen(false)}>
-              <Link href="/" className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} p-1`}>ELBORTEWALKS.COM</Link>
-            </div>
-            <div onClick={() => setOpen(false)}>
-              <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} p-1`}>About</Link>
-            </div>
-            <div onClick={() => setOpen(false)}>
-              <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} p-1`}>Features</Link>
-            </div>
-            <div onClick={() => setOpen(false)}>
-              <p>All Rights Reserved</p>
-            </div>
+          <div className="flex flex-col gap-10 mt-16 ">
+            <Link href="/" onClick={() => setOpen(false)}
+              className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} HelveticaNowText text-sm`}>
+              ELABORTEWALKS.COM
+            </Link>
+            <Link href="/about" onClick={() => setOpen(false)}
+              className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} HelveticaNowText text-sm`}>
+              About
+            </Link>
+            <Link href="/stories" onClick={() => setOpen(false)}
+              className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} HelveticaNowText text-sm`}>
+              Features
+            </Link>
+            <Link href="" onClick={() => setOpen(false)}
+              className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} HelveticaNowText text-sm`}>
+              All Rights Reserved
+            </Link>
           </div>
         </div>
         {/* mobile Menu End*/}
 
         {/* Main Menu Starts*/}
         <div className="w-full flex flex-col justify-between items-center">
-          <div className="hidden md:flex justify-between w-full text-sm leading-[14px] font-normal text-white  bg-[#F2F2F2]  px-4 py-2">
-            <Link
-              href="/"
-              className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaMedium `}>
-              ELBORTEWALKS.COM
-            </Link>
-            <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaMedium `}>
-              About
-            </Link>
-            <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaMedium `}>
-              Fetures
-            </Link>
-            <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaMedium `}>
-              All Rights Reserved
-            </Link>
-          </div>
+          <ul className="hidden md:grid grid-cols-4 justify-between w-full  bg-[#F2F2F2]  px-4 py-2">
+            <li>
+              <Link
+                href="/"
+                className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
+                ELABORTEWALKS.COM
+              </Link>
+            </li>
+            <li className='text-left'>
+              <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
+                About
+              </Link>
+            </li>
+            <li className='text-right'>
+              <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
+                Fetures
+              </Link>
+            </li>
+            <li className='text-right'>
+              <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
+                All Rights Reserved
+              </Link>
+            </li>
+          </ul>
           <div className="md:bg-transparent bg-[#7B7B7B] w-full px-4 py-3 flex flex-row justify-between items-center">
             <div
-              className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${
-                open ? 'mt-[10px]' : 'mt-0'
-              }`}
+              className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${open ? 'mt-[10px]' : 'mt-0'
+                }`}
               onClick={() => {
                 setOpen(!open);
               }}
             >
               {/* hamburger button */}
               <span
-                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
-                  open ? 'rotate-45 translate-y-2.5 bg-white' : ''
-                }`}
+                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? 'rotate-45 translate-y-2.5 bg-white' : ''
+                  }`}
               />
               <span
-                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
-                  open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
-                }`}
+                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
+                  }`}
               />
             </div>
             <div className="md:w-full mx-auto flex items-center md:justify-center justify-end">
