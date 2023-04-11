@@ -5,9 +5,9 @@ import { useState } from 'react';
 import LiveScroll from './liveScroll';
 import Logo from '../public/logo.png';
 import Home from '../public/images/home.svg';
-import About from '../public/images/home.svg';
-import Feature from '../public/images/home.svg';
-import Copyright from '../public/images/home.svg';
+import About from '../public/images/about.png';
+import Feature from '../public/images/feature.png';
+import Copyright from '../public/images/copyright.png';
 
 
 import { useRouter } from 'next/router';
@@ -79,18 +79,18 @@ export default function Header() {
               </Link>
             </li>
             <li className='text-left'>
-              <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
-                About
+              <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium justify-end `}>
+                  <Image src={About} alt=""  />
               </Link>
             </li>
             <li className='text-right'>
-              <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
-                Fetures
+              <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium text-center `}>
+                  <Image src={Feature} alt=""  />
               </Link>
             </li>
             <li className='text-right'>
               <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
-                All Rights Reserved
+                  <Image src={Copyright} alt=""  />
               </Link>
             </li>
           </ul>
