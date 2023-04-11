@@ -80,7 +80,7 @@ export default function Header() {
             </li>
             <li className='text-left'>
               <Link href="/about" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
-                  <Image src={About} alt="" className='object-cover h-full w-full' />
+                  <Image src={About} alt="" />
               </Link>
             </li>
             <li className='text-right'>
