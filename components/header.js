@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import LiveScroll from './liveScroll';
 import Logo from '../public/logo.png';
+import Home from '../public/images/home.svg';
+import About from '../public/images/home.svg';
+import Feature from '../public/images/home.svg';
+import Copyright from '../public/images/home.svg';
+
+
 import { useRouter } from 'next/router';
 
 export default function Header() {
@@ -69,7 +75,7 @@ export default function Header() {
               <Link
                 href="/"
                 className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
-                ELABORTEWALKS.COM
+                <Image src={Home} alt=""  />
               </Link>
             </li>
             <li className='text-left'>
