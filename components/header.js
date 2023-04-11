@@ -3,10 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import LiveScroll from './liveScroll';
-import Logo from '../public/logo.png';
+import Logo from '../public/logo.svg';
 import Home from '../public/images/home.svg';
-import About from '../public/images/about.png';
-import Feature from '../public/images/feature.png';
+import About from '../public/images/about.svg';
+import Feature from '../public/images/feature.svg';
 import Copyright from '../public/images/copyright.png';
 
 
@@ -70,27 +70,27 @@ export default function Header() {
 
         {/* Main Menu Starts*/}
         <div className="w-full flex flex-col justify-between items-center">
-          <ul className="hidden md:grid grid-cols-4 justify-between w-full  bg-[#F2F2F2]  px-4 py-2">
-            <li>
+          <ul className="hidden md:grid grid-cols-4 justify-between w-full  bg-[#F2F2F2]  px-4 pt-2">
+            <li className='text-left'>
               <Link
                 href="/"
-                className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
-                <Image src={Home} alt=""  />
+                className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
+                <Image src={Home} alt="" />
               </Link>
             </li>
             <li className='text-left'>
-              <Link href="/about" className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium justify-end `}>
-                  <Image src={About} alt=""  />
+              <Link href="/about" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
+                  <Image src={About} alt="" className='object-cover h-full w-full' />
               </Link>
             </li>
             <li className='text-right'>
-              <Link href="/stories" className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium text-center `}>
-                  <Image src={Feature} alt=""  />
+              <Link href="/stories" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
+                  <Image src={Feature} alt="" />
               </Link>
             </li>
             <li className='text-right'>
-              <Link href="" className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-[#484647] text-white"} HelveticaNowText text-xs leading-[14px] font-medium `}>
-                  <Image src={Copyright} alt=""  />
+              <Link href="" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
+                  <Image src={Copyright} alt="" />
               </Link>
             </li>
           </ul>

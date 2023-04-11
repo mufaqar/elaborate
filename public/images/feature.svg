@@ -1,0 +1,13 @@
+<svg id="Component_4_1" data-name="Component 4 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55.841" height="18.015" viewBox="0 0 55.841 18.015">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_348" data-name="Rectangle 348" width="55.84" height="18.015" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectangle_347" data-name="Rectangle 347" width="55.37" height="12" transform="translate(0.471 1.43)" fill="#484647"/>
+  <g id="Group_183" data-name="Group 183" transform="translate(0 0)">
+    <g id="Group_182" data-name="Group 182" clip-path="url(#clip-path)">
+      <text id="Features" transform="translate(0 12.84)" fill="#f2f2f2" font-size="15" font-family="HelveticaNowText-Regular, Helvetica Now Text "><tspan x="0" y="0" letter-spacing="-0.099em">F</tspan><tspan y="0" letter-spacing="-0.059em">eatur</tspan><tspan y="0" letter-spacing="-0.06em">e</tspan><tspan y="0">s</tspan></text>
+    </g>
+  </g>
+</svg>
