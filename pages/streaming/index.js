@@ -29,7 +29,7 @@ export default function Slug({ url }) {
               <p className=" text-xs leading-4 px-[6px] pr-[16px] NeueHaasRoman bg-[#F2F2F2] text-black min-w-[212px]  ">
                 {title}
               </p>
-              <p className=" text-xs leading-4 uppercase text-center px-[6px] NeueHaasRoman bg-[#484647] text-white min-w-[90px]   ">
+              <p className=" text-xs leading-4 uppercase text-right px-[2px] NeueHaasRoman bg-[#484647] text-white min-w-[90px]   ">
                 {s}
               </p>
             </div>

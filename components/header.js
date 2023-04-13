@@ -7,7 +7,11 @@ import Logo from '../public/logo.svg';
 import Home from '../public/images/home.svg';
 import About from '../public/images/about.svg';
 import Feature from '../public/images/feature.svg';
-import Copyright from '../public/images/copyright.png';
+import Copyright from '../public/images/copyright.svg';
+import Home_yellow from '../public/images/home-yellow.svg';
+import About_yellow from '../public/images/about-yellow.svg';
+import Feature_yellow from '../public/images/feature-yellow.svg';
+import Copyright_yellow from '../public/images/copyright-yellow.svg';
 
 
 import { useRouter } from 'next/router';
@@ -74,23 +78,39 @@ export default function Header() {
             <li className='text-left'>
               <Link
                 href="/"
-                className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
-                <Image src={Home} alt="" />
+                className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex max-w-[140px] max-h-[35px] w-full h-full`}>
+                {router.pathname == '/' ? (
+                  <Image src={Home_yellow} alt="white-logo" width={165} height={40} ></Image>) :
+                  (
+                    <Image src={Home} alt="logo" width={165} height={40} ></Image>
+                  )}
               </Link>
             </li>
             <li className='text-left'>
-              <Link href="/about" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
-                  <Image src={About} alt="" />
+              <Link href="/about" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex max-w-[50px] max-h-[35px] w-full h-full`}>
+              {router.pathname == '/about' ? (
+                  <Image src={About_yellow} alt="white-logo" width={165} height={40} ></Image>) :
+                  (
+                    <Image src={About} alt="logo" width={165} height={40} ></Image>
+                  )}
               </Link>
             </li>
             <li className='text-right'>
-              <Link href="/stories" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
-                  <Image src={Feature} alt="" />
+              <Link href="/stories" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex max-w-[60px] max-h-[35px] w-full h-full`}>
+              {router.pathname == '/stories' ? (
+                  <Image src={Feature_yellow} alt="white-logo" width={165} height={40} ></Image>) :
+                  (
+                    <Image src={Feature} alt="logo" width={165} height={40} ></Image>
+                  )}
               </Link>
             </li>
             <li className='text-right'>
-              <Link href="" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex`}>
-                  <Image src={Copyright} alt="" />
+              <Link href="" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex max-w-[140px] max-h-[35px] w-full h-full`}>
+              {router.pathname == '/' ? (
+                  <Image src={Copyright_yellow} alt="white-logo" width={165} height={40} ></Image>) :
+                  (
+                    <Image src={Copyright} alt="logo" width={165} height={40} ></Image>
+                  )}
               </Link>
             </li>
           </ul>

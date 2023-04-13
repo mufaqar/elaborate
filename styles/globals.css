@@ -15,7 +15,14 @@
   font-family: HelveticaNowText;
   src: url(../public/fonts/HelveticaNowText-Medium.ttf);
 }
+@font-face {
+  font-family: HelveticaNowText_Bold;
+  src: url(../public/fonts/HelveticaNowText-Bold.ttf);
+}
 
+.HelveticaNowText_Bold{
+  font-family: HelveticaNowText_Bold;
+}
 .HelveticaNowText{
   font-family: HelveticaNowText;
 }
