@@ -106,7 +106,7 @@ export default function Header() {
             </li>
             <li className='text-right'>
               <Link href="" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex max-w-[140px] max-h-[35px] w-full h-full`}>
-              {router.pathname == '/' ? (
+              {router.pathname == '' ? (
                   <Image src={Copyright_yellow} alt="white-logo" width={165} height={40} ></Image>) :
                   (
                     <Image src={Copyright} alt="logo" width={165} height={40} ></Image>
