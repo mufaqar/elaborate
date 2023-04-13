@@ -5,6 +5,7 @@ import Cam from '../../public/images/cam.png';
 import { useRouter } from 'next/router';
 import Color_Img from '../../public/images/color-img.png';
 import Play from '../../public/images/play.png';
+import Stop from '../../public/images/stop.png';
 
 export default function Slug({ url }) {
   const router = useRouter();
@@ -15,6 +16,8 @@ export default function Slug({ url }) {
   //console.log(link);
 
   let s = new Date().toLocaleTimeString();
+
+  const [audio, setAudio] = useState(false);
 
   return (
     <section className="overflow-hidden">
@@ -35,11 +38,25 @@ export default function Slug({ url }) {
             </div>
           </div>
           <div className="flex items-center">
-            <Image
-              src={Play}
-              alt=""
-              className="bg-[#EBFD00] object-contain md:p-3 md:h-9 md:w-9 h-7 w-7 p-2"
-            />
+            <div className='bg-[#EBFD00] md:p-3 md:h-9 md:w-9 h-7 w-7 p-2 cursor-pointer'
+              onClick={() => {
+                setAudio(!audio);
+              }}
+            >
+              {audio ? (
+                <Image
+                  src={Stop}
+                  alt=""
+                  className="object-contain"
+                />) :
+                (
+                  <Image
+                    src={Play}
+                    alt=""
+                    className="object-contain"
+                  />
+                )}
+            </div>
             <p className="text-xs leading-5 pt-2 pb-2 md:px-[10px] pl-[6px] pr-0 NeueHaasRoman bg-[#F2F2F2] md:h-9 h-7 w-full">
               Field Recordings from Augusta National Golf Club
             </p>
