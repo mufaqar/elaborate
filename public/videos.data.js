@@ -7,7 +7,7 @@ export const videoData = [
   {
     url: 'gauf1M1CvFo',
     title: 'PEBBLE BEACH GOLF LINKS ',
-    title2: '- PEBBLE BEACH, CA, USA',
+    title2: 'PEBBLE BEACH, CA, USA',
   },
   {
     url: 'w9ItD-QixNE',
