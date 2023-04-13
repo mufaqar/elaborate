@@ -10,7 +10,7 @@ export default function Footer() {
   var title = router.query['title'];
   let s = new Date().toLocaleTimeString();
   return (
-    <footer className="fixed left-0 right-0 bottom-0 border-t-[13px] border-[#EBFF00]">
+    <footer className="fixed left-0 right-0 bottom-0 border-t-[13px] border-[#EBFD00]">
       <div
         className={`hidden md:grid md:grid-cols-4 grid-cols-1  border-t border-[#707070]`}
       >
