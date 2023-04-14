@@ -26,11 +26,11 @@
 
 .HelveticaNowText_Light{
   font-family: HelveticaNowText_Light;
-  font-weight: 500;
+  font-weight: normal;
 }
 .HelveticaNowText_Bold{
   font-family: HelveticaNowText_Bold;
-  font-weight: 900;
+  font-weight: bold;
 }
 .HelveticaNowText{
   font-family: HelveticaNowText;
