@@ -12,6 +12,10 @@
   src: url(../public/fonts/NeueHaasDisplayRoman.ttf);
 }
 @font-face {
+  font-family: HelveticaNowText_Light;
+  src: url(../public/fonts/HelveticaNowText-Light.ttf);
+}
+@font-face {
   font-family: HelveticaNowText;
   src: url(../public/fonts/HelveticaNowText-Medium.ttf);
 }
@@ -20,8 +24,13 @@
   src: url(../public/fonts/HelveticaNowText-Bold.ttf);
 }
 
+.HelveticaNowText_Light{
+  font-family: HelveticaNowText_Light;
+  font-weight: 500;
+}
 .HelveticaNowText_Bold{
   font-family: HelveticaNowText_Bold;
+  font-weight: 900;
 }
 .HelveticaNowText{
   font-family: HelveticaNowText;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Cam from '../../public/images/cam.png';
+import Cam from '../../public/images/cam.svg';
 import { useRouter } from 'next/router';
 import Color_Img from '../../public/images/color-img.png';
 import Play from '../../public/images/play.png';
@@ -25,9 +25,9 @@ export default function Slug({ url }) {
         <iframe
           src={`https://www.youtube.com/embed/${link}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
         ></iframe>
-        <div className="absolute md:bottom-28 bottom-16 left-4 md:right-auto right-4 max-w-[345px]">
+        <div className="absolute md:bottom-24 bottom-16 left-4 md:right-auto right-4 max-w-[345px]">
           <Image src={Cam} alt="" />
-          <div className="flex items-center my-4 justify-between">
+          <div className="flex items-center my-3 justify-between">
             <div className="flex border border-white">
               <p className=" text-xs leading-4 px-[6px] pr-[16px] NeueHaasRoman bg-[#F2F2F2] text-black min-w-[212px]  ">
                 {title}
