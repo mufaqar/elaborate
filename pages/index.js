@@ -17,7 +17,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="absolute md:bottom-28 md:top-auto top-36 left-5 md:right-auto right-5 flex items-center">
+      <div className="absolute md:bottom-24 md:top-auto top-36 left-5 md:right-auto right-5 flex items-center">
         <Image
           src={Play}
           alt=""
