@@ -27,7 +27,7 @@ export default function Footer() {
                 ${link == item.url && 'text-[#F2F2F2]'}`}
               >
                 <span className="HelveticaNowText_Bold"> {item.title}</span> -{' '}
-                <span className="HelveticaNowText_Light italic"> {item.title2}</span>
+                <span className="HelveticaNowText_Regular italic"> {item.title2}</span>
               </Link>
               <p
                 className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman border-l border-[#707070] ${

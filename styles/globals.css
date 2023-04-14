@@ -20,10 +20,18 @@
   src: url(../public/fonts/HelveticaNowText-Medium.ttf);
 }
 @font-face {
+  font-family: HelveticaNowText_Regular;
+  src: url(../public/fonts/HelveticaNowText-Regular.ttf);
+}
+@font-face {
   font-family: HelveticaNowText_Bold;
   src: url(../public/fonts/HelveticaNowText-Bold.ttf);
 }
 
+.HelveticaNowText_Regular{
+  font-family: HelveticaNowText_Regular;
+  font-weight: normal;
+}
 .HelveticaNowText_Light{
   font-family: HelveticaNowText_Light;
   font-weight: normal;
