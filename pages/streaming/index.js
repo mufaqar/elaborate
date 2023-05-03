@@ -16,8 +16,8 @@ export default function Slug({ url }) {
   var title2 = router.query['title2'];
 
   var settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -77,6 +77,24 @@ export default function Slug({ url }) {
                 <iframe
                   src={`https://www.youtube.com/embed/${item.url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
                 ></iframe>
+              </div>
+              <div className="bg-[#F2F2F2] md:border-t-0 border-[#EBFD00] border-t-[13px] md:hidden">
+                <div
+                  className={`flex h-full justify-between border-y border-[#707070]`}
+                >
+                  <Link
+                    href={`/streaming?streaming=${item.url}&title=${item.title}&title2=${item.title2}`}
+                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase border-l border-[#707070] [&:nth-child(1)>p]:border-l-0`}
+                  >
+                    <span className="HelveticaNowText_Bold"> {item.title}</span> -{' '}
+                    <span className="HelveticaNowText_Regular italic"> {item.title2}</span>
+                  </Link>
+                  <p
+                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman border-l border-[#707070]`}
+                  >
+                    {s}
+                  </p>
+                </div>
               </div>
             </section>
             <div className='navigation absolute md:hidden block top-[65%] z-20'>

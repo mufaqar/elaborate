@@ -15,8 +15,8 @@ export default function Footer({ url }) {
   let s = new Date().toLocaleTimeString();
   const [audio, setAudio] = useState(false);
   return (
-      <footer className="fixed left-0 right-0 bottom-0 border-t-[13px] border-[#EBFD00]">
-        <div className="absolute md:bottom-24 bottom-12 left-4 md:right-auto right-4 max-w-[345px] mx-auto">
+      <footer className="fixed left-0 right-0 bottom-0 md:border-t-[13px] border-[#EBFD00] border-0">
+        <div className="absolute md:bottom-24 bottom-24 left-4 md:right-auto right-4 max-w-[345px] mx-auto">
           <div className={`${link == url ? 'hidden' : 'block'} mx-auto`}>
             <Image src={Cam} alt="" className='mx-auto'/>
             <div className="flex items-center my-3 justify-between">
