@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
 @font-face {
   font-family: NeueHaasMedium;
   src: url(../public/fonts/NeueHaasDisplayMediu.ttf);
@@ -89,6 +92,20 @@ iframe {
   50% {opacity: 1}
   100% {opacity:0.1} 
 }
+
+.navigation .Prevbtn,.Nextbtn{
+  top: 65%;
+  z-index: 999;
+  position: absolute;
+}
+.Nextbtn {
+  right: 25px;
+}
+.Prevbtn {
+  left: 20px;
+}
+
+
 
 @media (min-aspect-ratio: 16/9) {
   .video-container iframe {
