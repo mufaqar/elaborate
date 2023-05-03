@@ -13,12 +13,12 @@ import About_yellow from '../public/images/about-yellow.svg';
 import Feature_yellow from '../public/images/feature-yellow.svg';
 import Copyright_yellow from '../public/images/copyright-yellow.svg';
 
-
 import { useRouter } from 'next/router';
 
-export default function Header() {
+export default function Header({url}) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  var link = router.query['streaming'];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -32,50 +32,11 @@ export default function Header() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className="flex  items-center">
-        {/* mobile Menu Starts */}
-        <div
-          className={`md:hidden absolute top-0 left-0 h-screen w-screen z-50 bg-[#7B7B7B] px-4 transform ${open ? '-translate-x-0' : '-translate-x-full'
-            } transition-transform duration-300 ease-in-out  `}
-        >
-          <div
-            className="flex items-center justify-center mx-auto mt-5 bg-[#7B7B7B]"
-            onClick={() => setOpen(false)}
-          >
-            {' '}
-            {/*logo container*/}
-            <Link
-              href="/"
-              className="text-xl font-semibold flex justify-center items-center text-white"
-            >
-              <Image src={Logo} alt="" className="w-2/3" />
-            </Link>
-          </div>
-          <div className="flex flex-col gap-10 mt-16 ">
-            <Link href="/" onClick={() => setOpen(false)}
-              className={`${router.pathname === '/' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} HelveticaNowText text-sm`}>
-              ELABORTEWALKS.COM
-            </Link>
-            <Link href="/about" onClick={() => setOpen(false)}
-              className={`${router.pathname === '/about' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} HelveticaNowText text-sm`}>
-              About
-            </Link>
-            <Link href="/stories" onClick={() => setOpen(false)}
-              className={`${router.pathname === '/stories' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} HelveticaNowText text-sm`}>
-              Features
-            </Link>
-            <Link href="" onClick={() => setOpen(false)}
-              className={`${router.pathname === '' ? "bg-[#EBFF00] text-black" : "bg-transparent text-white"} HelveticaNowText text-sm`}>
-              All Rights Reserved
-            </Link>
-          </div>
-        </div>
-        {/* mobile Menu End*/}
-
+      <nav className="flex  items-center">        
         {/* Main Menu Starts*/}
         <div className="w-full flex flex-col justify-between items-center">
-          <ul className="hidden md:grid grid-cols-4 justify-between w-full  bg-[#F2F2F2]  px-4 pt-2">
-            <li className='text-left'>
+      <ul className={`grid md:grid-cols-4 grid-cols-2 justify-between w-full px-4 pt-2 ${link == url ? 'bg-[#F2F2F2]' : 'bg-transparent'}`}>
+            <li className='text-left md:block hidden'>
               <Link
                 href="/"
                 className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex max-w-[140px] max-h-[35px] w-full h-full`}>
@@ -104,7 +65,7 @@ export default function Header() {
                   )}
               </Link>
             </li>
-            <li className='text-right'>
+            <li className='text-right md:block hidden'>
               <Link href="" className={`HelveticaNowText text-xs leading-[14px] font-medium inline-flex max-w-[140px] max-h-[35px] w-full h-full`}>
               {router.pathname == '' ? (
                   <Image src={Copyright_yellow} alt="white-logo" width={165} height={40} ></Image>) :
@@ -114,27 +75,10 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-          <div className="md:bg-transparent bg-[#7B7B7B] w-full px-4 py-3 flex flex-row justify-between items-center">
-            <div
-              className={`z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden ${open ? 'mt-[10px]' : 'mt-0'
-                }`}
-              onClick={() => {
-                setOpen(!open);
-              }}
-            >
-              {/* hamburger button */}
-              <span
-                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? 'rotate-45 translate-y-2.5 bg-white' : ''
-                  }`}
-              />
-              <span
-                className={`h-[3px] w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? '-rotate-45 -translate-y-2.5 bg-white' : ''
-                  }`}
-              />
-            </div>
+          <div className="bg-transparent w-full px-4 py-3 flex flex-row justify-between items-center">            
             <div className="md:w-full mx-auto flex items-center md:justify-center justify-end">
               <Link href="/" className="justify-center flex">
-                <Image src={Logo} alt="" className="md:w-full w-2/3" />
+                <Image src={Logo} alt="" className="w-full" />
               </Link>
             </div>
           </div>

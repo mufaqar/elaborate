@@ -25,43 +25,7 @@ export default function Slug({ url }) {
         <iframe
           src={`https://www.youtube.com/embed/${link}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
         ></iframe>
-        <div className="absolute md:bottom-24 bottom-16 left-4 md:right-auto right-4 max-w-[345px]">
-          <Image src={Cam} alt="" />
-          <div className="flex items-center my-3 justify-between">
-            <div className="flex border border-white">
-              <p className=" text-xs leading-4 px-[6px] pr-[16px] NeueHaasRoman bg-[#F2F2F2] text-black min-w-[212px]  ">
-                {title}
-              </p>
-              <p className=" text-xs leading-4 uppercase text-right px-[2px] NeueHaasRoman bg-[#484647] text-white min-w-[90px]   ">
-                {s}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className='bg-[#EBFD00] md:p-3 md:h-9 md:w-9 h-7 w-7 p-2 cursor-pointer'
-              onClick={() => {
-                setAudio(!audio);
-              }}
-            >
-              {audio ? (
-                <Image
-                  src={Stop}
-                  alt=""
-                  className="object-contain"
-                />) :
-                (
-                  <Image
-                    src={Play}
-                    alt=""
-                    className="object-contain"
-                  />
-                )}
-            </div>
-            <p className="text-xs leading-5 pt-2 pb-2 md:px-[10px] pl-[6px] pr-0 NeueHaasRoman bg-[#F2F2F2] md:h-9 h-7 w-full">
-              Field Recordings from Augusta National Golf Club
-            </p>
-          </div>
-        </div>
+        
         {/* <div className={` grid md:grid-cols-4 grid-cols-1 absolute bottom-6 left-0 right-0 `}>
           {videoData.map((item, i) => (
             <div key={i} className="bg-[#F2F2F2]">

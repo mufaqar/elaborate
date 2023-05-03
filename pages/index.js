@@ -17,16 +17,6 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="absolute md:bottom-24 md:top-auto top-36 left-5 md:right-auto right-5 flex items-center">
-        <Image
-          src={Play}
-          alt=""
-          className="bg-[#EBFD00] object-contain p-3 h-9 w-9"
-        />
-        <p className="text-xs leading-5 px-2 pt-2 pb-2  NeueHaasRoman bg-[#F2F2F2] h-9 w-fit">
-          Field Recordings from Augusta National Golf Club
-        </p>
-      </div>
     </section>
   );
 }

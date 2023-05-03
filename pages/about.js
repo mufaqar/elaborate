@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function About() {
   return (
     <section className="pb-[120px] pt-52">
-      <div className="container mx-auto text-center max-w-[408px] ">
+      <div className="container mx-auto text-center md:max-w-[408px] max-w-[251px] ">
         <p className="mb-4 text-center">
           Elaborate Walks™ is an online repository of on course happenings
           experienced by the world wide community of golf goers.
