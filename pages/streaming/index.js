@@ -79,7 +79,7 @@ export default function Slug({ url }) {
                 ></iframe>
               </div>
             </section>
-            <div className='navigation absolute md:top-[65%] top-[75%]'>
+            <div className='navigation absolute md:top-[65%] top-[70%]'>
               <button onClick={() => PrevSlide(item)} className='text-2xl font-bold text-[#EBFF00] Prevbtn'>&lt;</button>
               <button onClick={() => NextSlide(item)} className='text-2xl font-bold text-[#EBFF00] Nextbtn'>&gt;</button>
             </div>
