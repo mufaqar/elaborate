@@ -122,3 +122,9 @@ iframe {
 .max-w-25 {
   max-width: 25%;
 }
+
+@media only screen and (max-width: 1024px) {
+  .hide{
+    display: none;
+  }
+}

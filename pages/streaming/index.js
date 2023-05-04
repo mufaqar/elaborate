@@ -8,8 +8,10 @@ import Play from '../../public/images/play.png';
 import Stop from '../../public/images/stop.png';
 import Slider from "react-slick";
 import { videoData } from '../../public/videos.data';
+import NewsBox from '../../components/newsBox';
 
 export default function Slug({ url }) {
+
   const router = useRouter();
   var link = router.query['streaming'];
   var title = router.query['title'];
@@ -70,55 +72,30 @@ export default function Slug({ url }) {
   return (
     <>
       <Slider ref={slider} {...settings}>
-        {videoData.map((item, i) => (
-          <>
-            <section key={i} className="overflow-hidden">
-              <div className="relative video-container">
-                <iframe
-                  src={`https://www.youtube.com/embed/${item.url}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
-                ></iframe>
-              </div>
-              <div className="bg-[#F2F2F2] md:border-t-0 border-[#EBFD00] border-t-[13px] md:hidden">
-                <div
-                  className={`flex h-full justify-between border-y border-[#707070]`}
-                >
-                  <Link
-                    href={`/streaming?streaming=${item.url}&title=${item.title}&title2=${item.title2}`}
-                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase border-l border-[#707070] [&:nth-child(1)>p]:border-l-0`}
-                  >
-                    <span className="HelveticaNowText_Bold"> {item.title}</span> -{' '}
-                    <span className="HelveticaNowText_Regular italic"> {item.title2}</span>
-                  </Link>
-                  <p
-                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman border-l border-[#707070]`}
-                  >
-                    {s}
-                  </p>
-                </div>
-              </div>
-            </section>
-            <div className='navigation absolute md:hidden block top-[65%] z-20'>
-              <button onClick={() => PrevSlide(item)} className='text-2xl font-bold text-[#EBFF00] Prevbtn'>&lt;</button>
-              <button onClick={() => NextSlide(item)} className='text-2xl font-bold text-[#EBFF00] Nextbtn'>&gt;</button>
-            </div>
-          </>
-        ))}
-        {/* <div className={` grid md:grid-cols-4 grid-cols-1 absolute bottom-6 left-0 right-0 `}>
-          {videoData.map((item, i) => (
-            <div key={i} className="bg-[#F2F2F2]">
-              <div className={`flex h-full justify-between ${link == item.url && 'bg-[#414141]'}`}>
-                <Link href={`/streaming?streaming=${item.url}&title=${item.title}?id=${i}`}
-                  className={`text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] [&:nth-child(1)>p]:border-l-0 ${link == item.url && 'text-[#F2F2F2]'}`}>
-                  {item.title}
-                </Link>
-                <p className={`text-xs leading-4 px-2 pt-3 pb-3 uppercase NeueHaasRoman border-l border-[#707070] ${link == item.url && 'text-[#EBFF00]'}`}>
-                  {s}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div> */}
-      </Slider>
+            {videoData.map((item, i) => (
+                <>
+                    <NewsBox
+                        url={item.url}
+                        id={i + 1}
+                        title={item.title}
+                        title2={item.title2}
+                        key={i}
+                    />
+                    <div className='navigation absolute lg:hidden block top-[65%] z-50'>
+                        <button onClick={() => PrevSlide(item)} className='text-2xl font-bold text-[#EBFF00] Prevbtn'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLlinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+                        <button onClick={() => NextSlide(item)} className='text-2xl font-bold text-[#EBFF00] Nextbtn'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </>
+            ))}
+        </Slider>
     </>
 
   );
