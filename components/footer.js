@@ -53,7 +53,7 @@ export default function Footer({ url }) {
   };
 
   return (
-    <footer className={`fixed left-0 right-0 bottom-0 md:border-t-[13px] border-[#EBFD00] ${link == url ? 'border-t-[13px] border-[#EBFD00]' : 'border-0'}  `}>
+    <footer className={`fixed left-0 right-0 bottom-0 ${link == url ? '' : ''}  `}>
       <div className="absolute md:bottom-24 bottom-20 left-4 md:right-auto right-4 max-w-[345px] mx-auto">
         <div className={`${link == url ? 'hidden' : 'block'} mx-auto`}>
           <Image src={Cam} alt="" className='mx-auto' />
@@ -95,33 +95,36 @@ export default function Footer({ url }) {
       </div>
 
       <div
-        className={`border-t border-[#707070] ${link == url ? 'block' : 'md:block hidden'}`}
+        className={`border-t-[13px] border-[#EBFD00]  ${link == url ? 'block' : 'md:block hidden'} ${router.pathname == '/' && 'md:block hidden'}`}
       >
-        <Slider {...settings}>
-          {videoData.map((item, i) => (
-            <div key={i} className="bg-[#F2F2F2]">
-              <div
-                className={`flex h-full justify-between ${link == item.url && 'bg-[#414141]'
-                  }`}
-              >
-                <Link
-                  href={`/streaming?streaming=${item.url}&title=${item.title}&title2=${item.title2}`}
-                  className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase border-l border-[#707070] [&:nth-child(1)>p]:border-l-0
-                ${link == item.url && 'text-[#F2F2F2]'}`}
-                >
-                  <span className="HelveticaNowText_Bold"> {item.title}</span> -{' '}
-                  <span className="HelveticaNowText_Regular italic"> {item.title2}</span>
-                </Link>
-                <p
-                  className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman border-l border-[#707070] ${link == item.url && 'text-[#EBFF00]'
+        <div
+        >
+          <Slider {...settings}>
+            {videoData.map((item, i) => (
+              <div key={i} className="bg-[#F2F2F2]">
+                <div
+                  className={`flex h-full justify-between ${link == item.url && 'bg-[#414141]'
                     }`}
                 >
-                  {s}
-                </p>
+                  <Link
+                    href={`/streaming?streaming=${item.url}&title=${item.title}&title2=${item.title2}`}
+                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase border-l border-[#707070] [&:nth-child(1)>p]:border-l-0
+                ${link == item.url && 'text-[#F2F2F2]'}`}
+                  >
+                    <span className="HelveticaNowText_Bold"> {item.title}</span> -{' '}
+                    <span className="HelveticaNowText_Regular italic"> {item.title2}</span>
+                  </Link>
+                  <p
+                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman border-l border-[#707070] ${link == item.url && 'text-[#EBFF00]'
+                      }`}
+                  >
+                    {s}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
 
       <LiveScroll Custom_bg="bg-[#F2F2F2]" Text_color="text-[#7B7B7B]" />
