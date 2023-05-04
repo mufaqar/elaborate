@@ -53,7 +53,7 @@ export default function Footer({ url }) {
   };
 
   return (
-    <footer className={`fixed left-0 right-0 bottom-0 ${link == url ? '' : ''}  `}>
+    <footer className={`fixed left-0 right-0 bottom-0 `}>
       <div className="absolute md:bottom-24 bottom-20 left-4 md:right-auto right-4 max-w-[345px] mx-auto">
         <div className={`${link == url ? 'hidden' : 'block'} mx-auto`}>
           <Image src={Cam} alt="" className='mx-auto' />
