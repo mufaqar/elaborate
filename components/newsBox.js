@@ -24,18 +24,18 @@ export default function StreamingBox({ url, title, title2 }) {
         >
             <div className="bg-[#F2F2F2] border-t border-[#707070]">
               <div
-                className={`flex h-full justify-between ${link == url && 'bg-[#414141]'
+                className={`flex h-[47px] justify-between ${link == url && 'bg-[#414141]'
                   }`}
               >
                 <Link
                   href={`/streaming?streaming=${url}&title=${title}&title2=${title2}`}
-                  className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase ${link == url && 'text-[#F2F2F2]'}`}
+                  className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase h-full items-center inline-flex border-l border-[#707070]  ${link == url && 'text-[#F2F2F2]'}`}
                 >
                   <span className="HelveticaNowText_Bold"> {title}</span> -{' '}
                   <span className="HelveticaNowText_Regular italic"> {title2}</span>
                 </Link>
                 <p
-                  className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman ${link == url && 'text-[#EBFF00]'
+                  className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase h-full items-center inline-flex NeueHaasRoman border-x border-[#707070]  ${link == url && 'text-[#EBFF00]'
                     }`}
                 >
                   {ltime}

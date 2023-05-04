@@ -54,7 +54,7 @@ export default function Footer({ url }) {
 
   return (
     <footer className={`fixed left-0 right-0 bottom-0 `}>
-      <div className="absolute md:bottom-24 bottom-20 left-4 md:right-auto right-4 max-w-[345px] mx-auto">
+      <div className="absolute md:bottom-24 bottom-24 left-4 md:right-auto right-4 max-w-[345px] mx-auto">
         <div className={`${link == url ? 'hidden' : 'block'} mx-auto`}>
           <Image src={Cam} alt="" className='mx-auto' />
           <div className="md:flex inline-block w-full items-center my-3 justify-between">
@@ -103,19 +103,19 @@ export default function Footer({ url }) {
             {videoData.map((item, i) => (
               <div key={i} className="bg-[#F2F2F2]">
                 <div
-                  className={`flex h-full justify-between ${link == item.url && 'bg-[#414141]'
+                  className={`flex h-[47px] items-center justify-between ${link == item.url && 'bg-[#414141]'
                     }`}
                 >
                   <Link
                     href={`/streaming?streaming=${item.url}&title=${item.title}&title2=${item.title2}`}
-                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase border-l border-[#707070] [&:nth-child(1)>p]:border-l-0
+                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase h-full items-center lg:block inline-flex border-l border-[#707070] [&:nth-child(1)>p]:border-l-0
                 ${link == item.url && 'text-[#F2F2F2]'}`}
                   >
                     <span className="HelveticaNowText_Bold"> {item.title}</span> -{' '}
                     <span className="HelveticaNowText_Regular italic"> {item.title2}</span>
                   </Link>
                   <p
-                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman border-l border-[#707070] ${link == item.url && 'text-[#EBFF00]'
+                    className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase NeueHaasRoman h-full items-center lg:block inline-flex border-l border-[#707070] ${link == item.url && 'text-[#EBFF00]'
                       }`}
                   >
                     {s}
