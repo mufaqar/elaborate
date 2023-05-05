@@ -72,43 +72,43 @@ export default function Slug({ url }) {
   return (
     <>
       <Slider ref={slider} {...settings}>
-            {videoData.map((item, i) => (
-                <>
-                    <div className="overflow-hidden relative w-full group">
-        <Link
-          href={`/streaming?streaming=${url}&title=${title}&title2=${title2}`}
-        >
-          <div className="video-container">
-            <iframe
-              src={`https://www.youtube.com/embed/${link}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
-            ></iframe>
-          </div>
-        </Link>
-        <div
-          className={`border-t-[13px] border-[#EBFD00] absolute bottom-[26px] left-0 right-0 ${link == url ? '' : 'lg:hidden'}`}
-        >
-            <div className="bg-[#F2F2F2] border-t border-[#707070]">
-              <div
-                className={`flex h-[47px] justify-between ${link == url && 'bg-[#414141]'
-                  }`}
+        {videoData.map((item, i) => (
+          <>
+            <div className="overflow-hidden relative w-full group">
+              <Link
+                href={`/streaming?streaming=${url}&title=${title}&title2=${title2}`}
               >
-                <Link
-                  href={`/streaming?streaming=${url}&title=${title}&title2=${title2}`}
-                  className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase h-full items-center inline-flex border-l border-[#707070]  ${link == url && 'text-[#F2F2F2]'}`}
-                >
-                  <span className="HelveticaNowText_Bold"> {title}</span> -{' '}
-                  <span className="HelveticaNowText_Regular italic"> {title2}</span>
-                </Link>
-                <p
-                  className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase h-full items-center inline-flex NeueHaasRoman border-x border-[#707070]  ${link == url && 'text-[#EBFF00]'
-                    }`}
-                >
-                  {s}
-                </p>
+                <div className="video-container">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${link}?controls=1&autoplay=1&mute=1&playsinline=1&loop=1`}
+                  ></iframe>
+                </div>
+              </Link>
+              <div
+                className={`border-t-[13px] border-[#EBFD00] absolute bottom-[26px] left-0 right-0 ${link == url ? '' : 'lg:hidden'}`}
+              >
+                <div className="bg-[#F2F2F2] border-t border-[#707070]">
+                  <div
+                    className={`flex h-[47px] justify-between ${link == url && 'bg-[#414141]'
+                      }`}
+                  >
+                    <Link
+                      href={`/streaming?streaming=${url}&title=${title}&title2=${title2}`}
+                      className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase h-full items-center inline-flex border-l border-[#707070]  ${link == url && 'text-[#F2F2F2]'}`}
+                    >
+                      <span className="HelveticaNowText_Bold"> {title}</span> -{' '}
+                      <span className="HelveticaNowText_Regular italic"> {title2}</span>
+                    </Link>
+                    <p
+                      className={`text-xs leading-4 px-2 pt-[6px] pb-[6px] uppercase h-full items-center inline-flex NeueHaasRoman border-x border-[#707070]  ${link == url && 'text-[#EBFF00]'
+                        }`}
+                    >
+                      {s}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-        </div>
-        {/* <div className="flex px-3 justify-between bg-[#F2F2F2] absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom- 24 bottom-24 md:group-hover:bottom-24 ">
+              {/* <div className="flex px-3 justify-between bg-[#F2F2F2] absolute transition duration-200 ease-in-out  left-0 right-0 md:-bottom- 24 bottom-24 md:group-hover:bottom-24 ">
           <Link
             href={`/streaming?streaming=${url}&title=${title}`}
             className="text-xs leading-[16px] py-2 uppercase text-blue-600 NeueHaasRoman"
@@ -119,22 +119,22 @@ export default function Slug({ url }) {
             {ltime}
           </p>
         </div> */}
-      </div>
-                    <div className='navigation absolute lg:hidden block top-[65%] z-50'>
-                        <button onClick={() => PrevSlide(item)} className='text-2xl font-bold text-[#EBFF00] Prevbtn'>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6">
-                                <path strokeLinecap="round" strokeLlinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                            </svg>
-                        </button>
-                        <button onClick={() => NextSlide(item)} className='text-2xl font-bold text-[#EBFF00] Nextbtn'>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </button>
-                    </div>
-                </>
-            ))}
-        </Slider>
+            </div>
+            <div className='navigation absolute lg:hidden block top-[65%] z-50'>
+              <button onClick={() => PrevSlide(item)} className='text-2xl font-bold text-[#EBFF00] Prevbtn'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLlinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+              <button onClick={() => NextSlide(item)} className='text-2xl font-bold text-[#EBFF00] Nextbtn'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+            </div>
+          </>
+        ))}
+      </Slider>
     </>
 
   );

@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import Cam_dark from '../public/images/cam-dark.png';
 import Link from 'next/link';
+import About_Us from '../public/images/about-us.svg'
 
 export default function About() {
   return (
-    <section className="pb-[120px] pt-52">
-      <div className="container mx-auto text-center md:max-w-[408px] max-w-[251px] ">
-        <p className="mb-4 text-center">
+    <section className="">
+      <div className="container mx-auto text-center w-full h-full ">
+      <Image src={About_Us} alt="" className='m-auto object-cover h-full w-full' />
+        {/* <p className="mb-4 text-center">
           Elaborate Walks™ is an online repository of on course happenings
           experienced by the world wide community of golf goers.
         </p>
@@ -38,7 +40,7 @@ export default function About() {
           <Link href="#" target="_blank" className="bg-[#484647] text-white">
             @elaboratewalks
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
